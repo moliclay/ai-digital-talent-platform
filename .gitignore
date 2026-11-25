@@ -6,6 +6,9 @@
 /backup/
 /logs/
 
+# 大体量设计截图（412 张 PNG，约 136MB），不入库
+/docs/frontend/shots/
+
 # Python
 .venv/
 __pycache__/
