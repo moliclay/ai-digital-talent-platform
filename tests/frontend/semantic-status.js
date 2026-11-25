@@ -1,0 +1,1 @@
+(() => { const cells=[...document.querySelectorAll('[class*="statusValue"]')].map(e=>e.innerText.replace(/\s+/g,' ').trim()); const badges=[...document.querySelectorAll('[class*="statusValue"] [class*="badge"]')].map(e=>e.innerText); return JSON.stringify({cells,badges,text:document.body.innerText.slice(0,500)}); })()

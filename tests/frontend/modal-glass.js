@@ -1,0 +1,1 @@
+(() => { const d=document.querySelector('[role="dialog"]'); const s=d?getComputedStyle(d):null; return JSON.stringify({body:document.body.className, dialog: d?{filter:s.backdropFilter,bg:s.backgroundColor,border:s.borderTopColor,radius:s.borderRadius}:null}); })()

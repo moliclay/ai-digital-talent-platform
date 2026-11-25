@@ -1,0 +1,1 @@
+(() => [...document.querySelectorAll('[class*="glassPanel"]')].map(el => { const s=getComputedStyle(el); return {cls:String(el.className).slice(-30), bg:s.backgroundImage.slice(0,80), border:s.borderTopColor, filter:s.backdropFilter}; }))()

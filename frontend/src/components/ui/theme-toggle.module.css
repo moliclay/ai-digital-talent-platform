@@ -1,0 +1,11 @@
+.toggle {
+  border-color: var(--border-default);
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+}
+
+.toggle:hover:not(:disabled) {
+  border-color: var(--border-strong);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+}

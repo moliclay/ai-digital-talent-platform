@@ -1,0 +1,29 @@
+.base {
+  display: block;
+  border-radius: var(--radius-control);
+  background: var(--skeleton-bg);
+}
+
+.full {
+  width: 100%;
+}
+
+.wide {
+  width: 75%;
+}
+
+.half {
+  width: 50%;
+}
+
+.short {
+  width: 25%;
+}
+
+.line {
+  height: var(--space-sm);
+}
+
+.title {
+  height: var(--space-xl);
+}

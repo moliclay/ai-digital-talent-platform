@@ -1,0 +1,3 @@
+赵磊，男，30 岁，本科，自动化专业，5 年工作经验。
+联系电话 13806022200，邮箱 user06@example.com。
+熟悉 机器学习、Docker、MySQL、JavaScript、PyTorch、Redis 等技术，期望工作城市：上海。

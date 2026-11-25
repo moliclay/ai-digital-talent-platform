@@ -1,0 +1,7 @@
+姓 名：周涛
+最高学历：博士
+所学专业：网络工程
+工作经验：6 年
+电 话：136-0802-9601
+Email: user08@mail.com
+专业技能：MySQL、Java、TensorFlow、PyTorch、Go

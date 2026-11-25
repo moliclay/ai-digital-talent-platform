@@ -1,0 +1,2022 @@
+{
+  "jobs": [
+    {
+      "id": "J-ALG",
+      "name": "岗位A（评测）",
+      "threshold": 70,
+      "conditions": [
+        {
+          "key": "学历",
+          "op": ">=",
+          "value": "硕士"
+        },
+        {
+          "key": "技能",
+          "op": "contains",
+          "value": [
+            "Python",
+            "PyTorch"
+          ]
+        },
+        {
+          "key": "工作年限",
+          "op": ">=",
+          "value": 3
+        }
+      ],
+      "weights": {
+        "education": 25,
+        "skills": 40,
+        "experience": 20,
+        "project": 10,
+        "other": 5
+      }
+    },
+    {
+      "id": "J-PRD",
+      "name": "岗位B（评测）",
+      "threshold": 65,
+      "conditions": [
+        {
+          "key": "学历",
+          "op": ">=",
+          "value": "本科"
+        },
+        {
+          "key": "技能",
+          "op": "contains",
+          "value": [
+            "需求分析",
+            "SQL"
+          ]
+        },
+        {
+          "key": "工作年限",
+          "op": ">=",
+          "value": 2
+        }
+      ],
+      "weights": {
+        "education": 20,
+        "skills": 40,
+        "experience": 20,
+        "project": 15,
+        "other": 5
+      }
+    },
+    {
+      "id": "J-FE",
+      "name": "岗位C（评测）",
+      "threshold": 70,
+      "conditions": [
+        {
+          "key": "学历",
+          "op": ">=",
+          "value": "大专"
+        },
+        {
+          "key": "技能",
+          "op": "contains",
+          "value": [
+            "JavaScript",
+            "React"
+          ]
+        },
+        {
+          "key": "工作年限",
+          "op": ">=",
+          "value": 1
+        }
+      ],
+      "weights": {
+        "education": 15,
+        "skills": 45,
+        "experience": 20,
+        "project": 15,
+        "other": 5
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "J-ALG-P01",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选1",
+        "education": "硕士",
+        "years_experience": 3,
+        "skills": [
+          "Python",
+          "PyTorch",
+          "TensorFlow"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "Python"
+        ]
+      },
+      "why": "学历硕士≥硕士、技能全覆盖、3年≥3年"
+    },
+    {
+      "id": "J-ALG-P02",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选2",
+        "education": "博士",
+        "years_experience": 4,
+        "skills": [
+          "Python",
+          "PyTorch",
+          "机器学习"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "Python"
+        ]
+      },
+      "why": "学历博士≥硕士、技能全覆盖、4年≥3年"
+    },
+    {
+      "id": "J-ALG-P03",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选3",
+        "education": "硕士",
+        "years_experience": 5,
+        "skills": [
+          "Python",
+          "PyTorch",
+          "深度学习"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "Python"
+        ]
+      },
+      "why": "学历硕士≥硕士、技能全覆盖、5年≥3年"
+    },
+    {
+      "id": "J-ALG-P04",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选4",
+        "education": "博士",
+        "years_experience": 6,
+        "skills": [
+          "Python",
+          "PyTorch",
+          "SQL"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "Python"
+        ]
+      },
+      "why": "学历博士≥硕士、技能全覆盖、6年≥3年"
+    },
+    {
+      "id": "J-ALG-P05",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选5",
+        "education": "硕士",
+        "years_experience": 7,
+        "skills": [
+          "Python",
+          "PyTorch",
+          "TensorFlow"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "Python"
+        ]
+      },
+      "why": "学历硕士≥硕士、技能全覆盖、7年≥3年"
+    },
+    {
+      "id": "J-ALG-P06",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选6",
+        "education": "博士",
+        "years_experience": 8,
+        "skills": [
+          "Python",
+          "PyTorch",
+          "机器学习"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "Python"
+        ]
+      },
+      "why": "学历博士≥硕士、技能全覆盖、8年≥3年"
+    },
+    {
+      "id": "J-ALG-F07",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选7",
+        "education": "本科",
+        "years_experience": 5,
+        "skills": [
+          "Python",
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "硕士"
+        ]
+      },
+      "why": "硬条件不满足：学历本科<硕士"
+    },
+    {
+      "id": "J-ALG-F08",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选8",
+        "education": "硕士",
+        "years_experience": 5,
+        "skills": [
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "硕士"
+        ]
+      },
+      "why": "硬条件不满足：缺技能Python"
+    },
+    {
+      "id": "J-ALG-F09",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选9",
+        "education": "硕士",
+        "years_experience": 1,
+        "skills": [
+          "Python",
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "硕士"
+        ]
+      },
+      "why": "硬条件不满足：年限1<3"
+    },
+    {
+      "id": "J-ALG-F10",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选10",
+        "education": "本科",
+        "years_experience": 5,
+        "skills": [
+          "Python",
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "硕士"
+        ]
+      },
+      "why": "硬条件不满足：学历本科<硕士"
+    },
+    {
+      "id": "J-ALG-F11",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选11",
+        "education": "硕士",
+        "years_experience": 5,
+        "skills": [
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "硕士"
+        ]
+      },
+      "why": "硬条件不满足：缺技能Python"
+    },
+    {
+      "id": "J-ALG-F12",
+      "job_id": "J-ALG",
+      "resume": {
+        "name": "岗位候选12",
+        "education": "硕士",
+        "years_experience": 1,
+        "skills": [
+          "Python",
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-ALG",
+        "name": "岗位A（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "硕士"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "Python",
+              "PyTorch"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 3
+          }
+        ],
+        "weights": {
+          "education": 25,
+          "skills": 40,
+          "experience": 20,
+          "project": 10,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "硕士"
+        ]
+      },
+      "why": "硬条件不满足：年限1<3"
+    },
+    {
+      "id": "J-PRD-P01",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选1",
+        "education": "本科",
+        "years_experience": 2,
+        "skills": [
+          "需求分析",
+          "SQL",
+          "Python"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 65,
+        "reason_contains": [
+          "需求分析"
+        ]
+      },
+      "why": "学历本科≥本科、技能全覆盖、2年≥2年"
+    },
+    {
+      "id": "J-PRD-P02",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选2",
+        "education": "硕士",
+        "years_experience": 3,
+        "skills": [
+          "需求分析",
+          "SQL",
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 65,
+        "reason_contains": [
+          "需求分析"
+        ]
+      },
+      "why": "学历硕士≥本科、技能全覆盖、3年≥2年"
+    },
+    {
+      "id": "J-PRD-P03",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选3",
+        "education": "博士",
+        "years_experience": 4,
+        "skills": [
+          "需求分析",
+          "SQL",
+          "TensorFlow"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 65,
+        "reason_contains": [
+          "需求分析"
+        ]
+      },
+      "why": "学历博士≥本科、技能全覆盖、4年≥2年"
+    },
+    {
+      "id": "J-PRD-P04",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选4",
+        "education": "本科",
+        "years_experience": 5,
+        "skills": [
+          "需求分析",
+          "SQL",
+          "机器学习"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 65,
+        "reason_contains": [
+          "需求分析"
+        ]
+      },
+      "why": "学历本科≥本科、技能全覆盖、5年≥2年"
+    },
+    {
+      "id": "J-PRD-P05",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选5",
+        "education": "硕士",
+        "years_experience": 6,
+        "skills": [
+          "需求分析",
+          "SQL",
+          "Python"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 65,
+        "reason_contains": [
+          "需求分析"
+        ]
+      },
+      "why": "学历硕士≥本科、技能全覆盖、6年≥2年"
+    },
+    {
+      "id": "J-PRD-P06",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选6",
+        "education": "博士",
+        "years_experience": 7,
+        "skills": [
+          "需求分析",
+          "SQL",
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 65,
+        "reason_contains": [
+          "需求分析"
+        ]
+      },
+      "why": "学历博士≥本科、技能全覆盖、7年≥2年"
+    },
+    {
+      "id": "J-PRD-F07",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选7",
+        "education": "大专",
+        "years_experience": 4,
+        "skills": [
+          "需求分析",
+          "SQL"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 65,
+        "reason_contains": [
+          "本科"
+        ]
+      },
+      "why": "硬条件不满足：学历大专<本科"
+    },
+    {
+      "id": "J-PRD-F08",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选8",
+        "education": "本科",
+        "years_experience": 4,
+        "skills": [
+          "SQL"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 65,
+        "reason_contains": [
+          "本科"
+        ]
+      },
+      "why": "硬条件不满足：缺技能需求分析"
+    },
+    {
+      "id": "J-PRD-F09",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选9",
+        "education": "本科",
+        "years_experience": 0,
+        "skills": [
+          "需求分析",
+          "SQL"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 65,
+        "reason_contains": [
+          "本科"
+        ]
+      },
+      "why": "硬条件不满足：年限0<2"
+    },
+    {
+      "id": "J-PRD-F10",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选10",
+        "education": "大专",
+        "years_experience": 4,
+        "skills": [
+          "需求分析",
+          "SQL"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 65,
+        "reason_contains": [
+          "本科"
+        ]
+      },
+      "why": "硬条件不满足：学历大专<本科"
+    },
+    {
+      "id": "J-PRD-F11",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选11",
+        "education": "本科",
+        "years_experience": 4,
+        "skills": [
+          "SQL"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 65,
+        "reason_contains": [
+          "本科"
+        ]
+      },
+      "why": "硬条件不满足：缺技能需求分析"
+    },
+    {
+      "id": "J-PRD-F12",
+      "job_id": "J-PRD",
+      "resume": {
+        "name": "岗位候选12",
+        "education": "本科",
+        "years_experience": 0,
+        "skills": [
+          "需求分析",
+          "SQL"
+        ]
+      },
+      "job": {
+        "id": "J-PRD",
+        "name": "岗位B（评测）",
+        "threshold": 65,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "本科"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "需求分析",
+              "SQL"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 2
+          }
+        ],
+        "weights": {
+          "education": 20,
+          "skills": 40,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 65,
+        "reason_contains": [
+          "本科"
+        ]
+      },
+      "why": "硬条件不满足：年限0<2"
+    },
+    {
+      "id": "J-FE-P01",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选1",
+        "education": "大专",
+        "years_experience": 1,
+        "skills": [
+          "JavaScript",
+          "React",
+          "Python"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "JavaScript"
+        ]
+      },
+      "why": "学历大专≥大专、技能全覆盖、1年≥1年"
+    },
+    {
+      "id": "J-FE-P02",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选2",
+        "education": "本科",
+        "years_experience": 2,
+        "skills": [
+          "JavaScript",
+          "React",
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "JavaScript"
+        ]
+      },
+      "why": "学历本科≥大专、技能全覆盖、2年≥1年"
+    },
+    {
+      "id": "J-FE-P03",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选3",
+        "education": "硕士",
+        "years_experience": 3,
+        "skills": [
+          "JavaScript",
+          "React",
+          "TensorFlow"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "JavaScript"
+        ]
+      },
+      "why": "学历硕士≥大专、技能全覆盖、3年≥1年"
+    },
+    {
+      "id": "J-FE-P04",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选4",
+        "education": "博士",
+        "years_experience": 4,
+        "skills": [
+          "JavaScript",
+          "React",
+          "机器学习"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "JavaScript"
+        ]
+      },
+      "why": "学历博士≥大专、技能全覆盖、4年≥1年"
+    },
+    {
+      "id": "J-FE-P05",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选5",
+        "education": "大专",
+        "years_experience": 5,
+        "skills": [
+          "JavaScript",
+          "React",
+          "Python"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "JavaScript"
+        ]
+      },
+      "why": "学历大专≥大专、技能全覆盖、5年≥1年"
+    },
+    {
+      "id": "J-FE-P06",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选6",
+        "education": "本科",
+        "years_experience": 6,
+        "skills": [
+          "JavaScript",
+          "React",
+          "PyTorch"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_pass",
+        "threshold": 70,
+        "reason_contains": [
+          "JavaScript"
+        ]
+      },
+      "why": "学历本科≥大专、技能全覆盖、6年≥1年"
+    },
+    {
+      "id": "J-FE-F07",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选7",
+        "education": "高中",
+        "years_experience": 3,
+        "skills": [
+          "JavaScript",
+          "React"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "大专"
+        ]
+      },
+      "why": "硬条件不满足：学历高中<大专"
+    },
+    {
+      "id": "J-FE-F08",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选8",
+        "education": "大专",
+        "years_experience": 3,
+        "skills": [
+          "React"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "大专"
+        ]
+      },
+      "why": "硬条件不满足：缺技能JavaScript"
+    },
+    {
+      "id": "J-FE-F09",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选9",
+        "education": "大专",
+        "years_experience": 0,
+        "skills": [
+          "JavaScript",
+          "React"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "大专"
+        ]
+      },
+      "why": "硬条件不满足：年限0<1"
+    },
+    {
+      "id": "J-FE-F10",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选10",
+        "education": "高中",
+        "years_experience": 3,
+        "skills": [
+          "JavaScript",
+          "React"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "大专"
+        ]
+      },
+      "why": "硬条件不满足：学历高中<大专"
+    },
+    {
+      "id": "J-FE-F11",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选11",
+        "education": "大专",
+        "years_experience": 3,
+        "skills": [
+          "React"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "大专"
+        ]
+      },
+      "why": "硬条件不满足：缺技能JavaScript"
+    },
+    {
+      "id": "J-FE-F12",
+      "job_id": "J-FE",
+      "resume": {
+        "name": "岗位候选12",
+        "education": "大专",
+        "years_experience": 0,
+        "skills": [
+          "JavaScript",
+          "React"
+        ]
+      },
+      "job": {
+        "id": "J-FE",
+        "name": "岗位C（评测）",
+        "threshold": 70,
+        "conditions": [
+          {
+            "key": "学历",
+            "op": ">=",
+            "value": "大专"
+          },
+          {
+            "key": "技能",
+            "op": "contains",
+            "value": [
+              "JavaScript",
+              "React"
+            ]
+          },
+          {
+            "key": "工作年限",
+            "op": ">=",
+            "value": 1
+          }
+        ],
+        "weights": {
+          "education": 15,
+          "skills": 45,
+          "experience": 20,
+          "project": 15,
+          "other": 5
+        }
+      },
+      "expected": {
+        "outcome": "must_fail",
+        "threshold": 70,
+        "reason_contains": [
+          "大专"
+        ]
+      },
+      "why": "硬条件不满足：年限0<1"
+    }
+  ]
+}

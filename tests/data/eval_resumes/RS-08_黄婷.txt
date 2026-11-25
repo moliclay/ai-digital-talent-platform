@@ -1,0 +1,7 @@
+姓 名：黄婷
+最高学历：大专
+所学专业：统计学
+工作经验：5 年
+电 话：139-0702-5900
+Email: user07@mail.com
+专业技能：Kubernetes、TensorFlow、Redis

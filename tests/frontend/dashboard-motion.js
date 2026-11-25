@@ -1,0 +1,1 @@
+(() => { const anims=document.getAnimations().map(a=>({name:a.animationName, state:a.playState})); const vals=[...document.querySelectorAll('[class*="statValue"]')].map(el=>el.innerText.replace(/\s+/g,' ').trim()); return JSON.stringify({reduce:matchMedia('(prefers-reduced-motion: reduce)').matches, anims, vals}); })()

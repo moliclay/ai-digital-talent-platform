@@ -1,0 +1,1 @@
+(() => { const panel=[...document.querySelectorAll('section')].find(s=>s.innerText.includes('向量能力')); return JSON.stringify({panel:panel?panel.innerText.replace(/\s+/g,' ').slice(0,500):null, skeletons:panel?panel.querySelectorAll('[class*="skeleton"]').length:null, html:panel?panel.innerHTML.slice(0,600):null}); })()

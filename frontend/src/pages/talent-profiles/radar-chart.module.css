@@ -1,0 +1,83 @@
+.chart {
+  display: block;
+  width: 100%;
+  max-width: var(--layout-radar);
+  height: auto;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.compact {
+  max-width: var(--layout-radar-compact);
+}
+
+.grid {
+  pointer-events: none;
+}
+
+.ring,
+.ringOuter,
+.axis {
+  fill: none;
+  stroke: var(--border-default);
+  stroke-width: var(--border-width-hairline);
+}
+
+.ringOuter {
+  stroke: var(--border-strong);
+}
+
+.axis {
+  stroke-dasharray: var(--space-hair) var(--space-2xs);
+}
+
+.area {
+  fill: var(--data-series-1);
+  fill-opacity: 0.14;
+  stroke: var(--data-series-1);
+  stroke-width: var(--border-width-focus);
+  stroke-linejoin: round;
+}
+
+.point {
+  fill: var(--surface-card);
+  stroke: var(--data-series-1);
+  stroke-width: var(--border-width-focus);
+}
+
+.pointHalo {
+  fill: none;
+  stroke: var(--data-series-1);
+  stroke-width: var(--border-width-hairline);
+  opacity: 0.45;
+}
+
+.pointPeak {
+  fill: var(--text-primary);
+  stroke: var(--data-series-1);
+  stroke-width: var(--border-width-focus);
+}
+
+.label,
+.labelPeak,
+.value {
+  font-family: var(--font-family-sans);
+}
+
+.label {
+  fill: var(--text-secondary);
+  font-size: var(--font-meta);
+  font-weight: var(--weight-regular);
+}
+
+.labelPeak {
+  fill: var(--text-primary);
+  font-size: var(--font-meta);
+  font-weight: var(--weight-semibold);
+}
+
+.value {
+  fill: var(--text-tertiary);
+  font-size: var(--font-meta);
+  font-variant-numeric: tabular-nums;
+}

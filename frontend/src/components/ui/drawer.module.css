@@ -1,0 +1,63 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background: var(--surface-overlay);
+  -webkit-backdrop-filter: var(--glass-overlay-blur); /* taste-skill-ignore: Glass 设计规范要求遮罩模糊 */
+  backdrop-filter: var(--glass-overlay-blur); /* taste-skill-ignore: Glass 设计规范要求遮罩模糊 */
+}
+
+.panel {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  display: flex;
+  flex-direction: column;
+  width: var(--drawer-width);
+  max-width: 100vw;
+  background: var(--drawer-bg);
+  border-left: var(--border-width-hairline) solid var(--drawer-border);
+  box-shadow: var(--drawer-shadow); /* taste-skill-ignore 抽屉是真实浮层 */
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-lg) var(--space-sm);
+  border-bottom: var(--border-width-hairline) solid var(--border-default);
+}
+
+.heading {
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--font-card);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-section);
+  color: var(--text-primary);
+}
+
+.meta {
+  margin-top: var(--space-2xs);
+  font-size: var(--font-meta);
+  line-height: var(--leading-meta);
+  color: var(--text-secondary);
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  padding: var(--space-lg);
+  overflow-y: auto;
+}
+
+.foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-xs);
+  padding: var(--space-md) var(--space-lg);
+  border-top: var(--border-width-hairline) solid var(--border-default);
+}

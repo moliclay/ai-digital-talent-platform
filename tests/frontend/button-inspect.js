@@ -1,0 +1,1 @@
+(() => [...document.querySelectorAll('button')].filter(b => (b.innerText||'').includes('处理下一份')).map(b => { const s=getComputedStyle(b); return {text:b.innerText, bg:s.backgroundColor, bgImg:s.backgroundImage.slice(0,80), color:s.color, border:s.borderTopColor, disabled:b.disabled}; }))()

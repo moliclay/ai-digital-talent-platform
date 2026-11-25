@@ -1,0 +1,48 @@
+/* Glass 基类：只由登录页导入，其他页面暂不切换视觉。 */
+.glass {
+  position: relative;
+  background: var(--glass-layer-1-bg);
+  -webkit-backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 玻璃 */
+  backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 玻璃 */
+  border: var(--border-width-hairline) solid var(--glass-layer-1-border);
+  border-radius: var(--glass-radius-md);
+  box-shadow: var(--glass-shadow-1); /* taste-skill-ignore: Glass 设计规范要求双层阴影 */
+}
+
+.glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 12%;
+  left: 12%;
+  height: var(--border-width-hairline);
+  border-radius: var(--glass-radius-pill);
+  background: var(--glass-highlight);
+  pointer-events: none;
+}
+
+.glass.lv2 {
+  background: var(--glass-layer-2-bg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 玻璃 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 玻璃 */
+  border-color: var(--glass-layer-2-border);
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 阴影 */
+}
+
+.glass.lv3 {
+  background: var(--glass-layer-3-bg);
+  -webkit-backdrop-filter: var(--glass-layer-3-blur); /* taste-skill-ignore: Glass 设计规范要求 L3 玻璃 */
+  backdrop-filter: var(--glass-layer-3-blur); /* taste-skill-ignore: Glass 设计规范要求 L3 玻璃 */
+  border-color: var(--glass-layer-3-border);
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 阴影 */
+}
+
+@supports not (backdrop-filter: blur(1px)) { /* taste-skill-ignore: Glass 降级检测 */
+  .glass,
+  .glass.lv2,
+  .glass.lv3 {
+    background: var(--glass-fallback-bg);
+    -webkit-backdrop-filter: none; /* taste-skill-ignore: Glass 降级 */
+    backdrop-filter: none; /* taste-skill-ignore: Glass 降级 */
+  }
+}

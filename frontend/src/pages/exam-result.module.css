@@ -1,0 +1,290 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  width: 100%;
+  max-width: calc(var(--space-5xl) * 16);
+  margin-inline: auto;
+}
+
+.verdict {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.scorePass,
+.scoreFail {
+  font-size: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--leading-tight);
+}
+
+.scorePass {
+  color: var(--feedback-success-text);
+}
+
+.scoreFail {
+  color: var(--feedback-error-text);
+}
+
+.scoreMax {
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.line {
+  margin: var(--space-sm) 0 0;
+  font-size: var(--font-body);
+  color: var(--text-primary);
+}
+
+.recommendation {
+  margin: var(--space-sm) 0 0;
+  font-size: var(--font-body);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+}
+
+.recommendationLabel {
+  margin-right: var(--space-xs);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.cumulative {
+  margin: var(--space-sm) 0 0;
+  font-size: var(--font-meta);
+  color: var(--text-tertiary);
+}
+
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  vertical-align: top;
+  border-bottom: var(--border-width-hairline) solid var(--border-default);
+}
+
+.table th {
+  font-size: var(--font-meta);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.table td {
+  font-size: var(--font-body);
+  color: var(--text-primary);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.colQuestion {
+  width: 34%;
+}
+
+.qContent {
+  margin: 0;
+  font-size: var(--font-body);
+  line-height: var(--leading-relaxed);
+  color: var(--text-primary);
+}
+
+.qMeta {
+  display: block;
+  margin-top: var(--space-2xs);
+  font-size: var(--font-micro);
+  color: var(--text-secondary);
+}
+
+.answer,
+.analysis {
+  font-size: var(--font-meta);
+  line-height: var(--leading-relaxed);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.analysis {
+  color: var(--text-secondary);
+}
+
+.alignEnd {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.scoreCell {
+  white-space: nowrap;
+}
+
+.standardNote {
+  margin: 0;
+  padding: var(--space-xs) var(--space-md) var(--space-sm);
+  font-size: var(--font-meta);
+  color: var(--text-tertiary);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.emptyWrap {
+  padding: var(--space-lg);
+}
+
+.skeletonStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 760px) {
+  .hideTablet {
+    display: none;
+  }
+
+  .table th,
+  .table td {
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .colQuestion {
+    width: auto;
+  }
+}
+
+/* Glass exam-result scope: mounted only when AppShell adds .glass-app / glass-route. */
+.page {
+  gap: var(--space-lg);
+}
+
+.pageHead {
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-width-hairline) solid var(--glass-layer-2-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-2-bg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  animation: resultRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-tag) backwards;
+}
+
+.pageHead h1 {
+  font-size: var(--font-read);
+  line-height: var(--leading-section);
+  letter-spacing: var(--tracking-normal);
+  color: var(--glass-ink);
+}
+
+.pageHead p {
+  max-width: 72ch;
+  margin-top: var(--space-2xs);
+  font-size: var(--font-meta);
+  line-height: var(--leading-meta);
+  color: var(--glass-ink-2);
+}
+
+.body {
+  animation: resultRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-panel) backwards;
+}
+
+.glassPanel {
+  min-width: 0;
+}
+
+.glassTable {
+  min-width: 0;
+}
+
+.scoreMax,
+.line,
+.recommendation,
+.recommendationLabel,
+.table th,
+.qMeta,
+.analysis,
+.standardNote,
+.cumulative {
+  color: var(--glass-ink-2);
+}
+
+.scorePass {
+  color: var(--glass-accent);
+}
+
+.scoreFail {
+  color: var(--glass-danger);
+}
+
+.table td,
+.qContent,
+.recommendationLabel {
+  color: var(--glass-ink);
+}
+
+.table th,
+.table td {
+  border-bottom-color: var(--glass-line-soft);
+}
+
+.standardNote,
+.cumulative {
+  color: var(--glass-ink-3);
+}
+
+.emptyWrap,
+.skeletonStack {
+  color: var(--glass-ink-2);
+}
+
+@keyframes resultRise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--motion-rise), 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .pageHead {
+    padding: var(--space-md);
+  }
+
+  .pageHead h1 {
+    font-size: var(--font-section);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageHead,
+  .body {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

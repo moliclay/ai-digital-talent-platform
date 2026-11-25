@@ -1,0 +1,656 @@
+[
+  {
+    "id": "RS-01",
+    "file": "eval_resumes/RS-01_张伟.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "张伟",
+      "phone": "13600000000",
+      "email": "user00@test.cn",
+      "education": "博士",
+      "major": "计算机科学与技术",
+      "years_experience": 0
+    },
+    "expected_skills": [
+      "Python",
+      "JavaScript",
+      "Go"
+    ]
+  },
+  {
+    "id": "RS-02",
+    "file": "eval_resumes/RS-02_王芳.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "王芳",
+      "phone": "13701003700",
+      "email": "user01@example.com",
+      "education": "硕士",
+      "major": "软件工程",
+      "years_experience": 1
+    },
+    "expected_skills": [
+      "机器学习",
+      "Redis",
+      "TensorFlow",
+      "需求分析"
+    ]
+  },
+  {
+    "id": "RS-03",
+    "file": "eval_resumes/RS-03_李强.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "李强",
+      "phone": "13802007400",
+      "email": "user02@example.com",
+      "education": "硕士",
+      "major": "人工智能",
+      "years_experience": 2
+    },
+    "expected_skills": [
+      "TensorFlow",
+      "Java",
+      "Go"
+    ]
+  },
+  {
+    "id": "RS-04",
+    "file": "eval_resumes/RS-04_刘敏.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "刘敏",
+      "phone": "13903011100",
+      "email": "user03@test.cn",
+      "education": "本科",
+      "major": "信息管理",
+      "years_experience": 3
+    },
+    "expected_skills": [
+      "Redis",
+      "Java",
+      "大模型"
+    ]
+  },
+  {
+    "id": "RS-05",
+    "file": "eval_resumes/RS-05_陈杰.txt",
+    "format": "txt",
+    "variant": 1,
+    "ground_truth": {
+      "name": "陈杰",
+      "phone": "13604014800",
+      "email": "user04@mail.com",
+      "education": "本科",
+      "major": "电子信息",
+      "years_experience": 3
+    },
+    "expected_skills": [
+      "产品设计",
+      "MySQL",
+      "JavaScript",
+      "Python"
+    ]
+  },
+  {
+    "id": "RS-06",
+    "file": "eval_resumes/RS-06_杨帆.txt",
+    "format": "txt",
+    "variant": 1,
+    "ground_truth": {
+      "name": "杨帆",
+      "phone": "13705018500",
+      "email": "user05@example.com",
+      "education": "本科",
+      "major": "数学与应用数学",
+      "years_experience": 4
+    },
+    "expected_skills": [
+      "Vue",
+      "JavaScript",
+      "深度学习",
+      "Java",
+      "大模型",
+      "PyTorch"
+    ]
+  },
+  {
+    "id": "RS-07",
+    "file": "eval_resumes/RS-07_赵磊.txt",
+    "format": "txt",
+    "variant": 1,
+    "ground_truth": {
+      "name": "赵磊",
+      "phone": "13806022200",
+      "email": "user06@example.com",
+      "education": "本科",
+      "major": "自动化",
+      "years_experience": 5
+    },
+    "expected_skills": [
+      "机器学习",
+      "Docker",
+      "MySQL",
+      "JavaScript",
+      "PyTorch",
+      "Redis"
+    ]
+  },
+  {
+    "id": "RS-08",
+    "file": "eval_resumes/RS-08_黄婷.txt",
+    "format": "txt",
+    "variant": 2,
+    "ground_truth": {
+      "name": "黄婷",
+      "phone": "13907025900",
+      "email": "user07@mail.com",
+      "education": "大专",
+      "major": "统计学",
+      "years_experience": 5
+    },
+    "expected_skills": [
+      "Kubernetes",
+      "TensorFlow",
+      "Redis"
+    ]
+  },
+  {
+    "id": "RS-09",
+    "file": "eval_resumes/RS-09_周涛.txt",
+    "format": "txt",
+    "variant": 2,
+    "ground_truth": {
+      "name": "周涛",
+      "phone": "13608029601",
+      "email": "user08@mail.com",
+      "education": "博士",
+      "major": "网络工程",
+      "years_experience": 6
+    },
+    "expected_skills": [
+      "MySQL",
+      "Java",
+      "TensorFlow",
+      "PyTorch",
+      "Go"
+    ]
+  },
+  {
+    "id": "RS-10",
+    "file": "eval_resumes/RS-10_吴静.txt",
+    "format": "txt",
+    "variant": 3,
+    "ground_truth": {
+      "name": "吴静",
+      "phone": "13709033301",
+      "email": "user09@mail.com",
+      "education": "硕士",
+      "major": "数据科学",
+      "years_experience": 7
+    },
+    "expected_skills": [
+      "Go",
+      "机器学习",
+      "Kubernetes"
+    ]
+  },
+  {
+    "id": "RS-11",
+    "file": "eval_resumes/RS-11_徐亮.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "徐亮",
+      "phone": "13810037001",
+      "email": "user10@mail.com",
+      "education": "硕士",
+      "major": "计算机科学与技术",
+      "years_experience": 8
+    },
+    "expected_skills": [
+      "Docker",
+      "SQL",
+      "大模型",
+      "Redis",
+      "Java",
+      "Vue"
+    ]
+  },
+  {
+    "id": "RS-12",
+    "file": "eval_resumes/RS-12_孙悦.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "孙悦",
+      "phone": "13911040701",
+      "email": "user11@mail.com",
+      "education": "本科",
+      "major": "软件工程",
+      "years_experience": 10
+    },
+    "expected_skills": [
+      "大模型",
+      "SQL",
+      "Redis"
+    ]
+  },
+  {
+    "id": "RS-13",
+    "file": "eval_resumes/RS-13_马超.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "马超",
+      "phone": "13612044401",
+      "email": "user12@test.cn",
+      "education": "本科",
+      "major": "人工智能",
+      "years_experience": 0
+    },
+    "expected_skills": [
+      "SQL",
+      "产品设计",
+      "Kubernetes",
+      "JavaScript"
+    ]
+  },
+  {
+    "id": "RS-14",
+    "file": "eval_resumes/RS-14_朱琳.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "朱琳",
+      "phone": "13713048101",
+      "email": "user13@test.cn",
+      "education": "本科",
+      "major": "信息管理",
+      "years_experience": 1
+    },
+    "expected_skills": [
+      "Vue",
+      "PyTorch",
+      "Go",
+      "MySQL"
+    ]
+  },
+  {
+    "id": "RS-15",
+    "file": "eval_resumes/RS-15_胡斌.txt",
+    "format": "txt",
+    "variant": 1,
+    "ground_truth": {
+      "name": "胡斌",
+      "phone": "13814051801",
+      "email": "user14@mail.com",
+      "education": "本科",
+      "major": "电子信息",
+      "years_experience": 2
+    },
+    "expected_skills": [
+      "JavaScript",
+      "TensorFlow",
+      "Java",
+      "Vue",
+      "Redis",
+      "数据分析"
+    ]
+  },
+  {
+    "id": "RS-16",
+    "file": "eval_resumes/RS-16_郭蕾.txt",
+    "format": "txt",
+    "variant": 1,
+    "ground_truth": {
+      "name": "郭蕾",
+      "phone": "13915055501",
+      "email": "user15@mail.com",
+      "education": "大专",
+      "major": "数学与应用数学",
+      "years_experience": 3
+    },
+    "expected_skills": [
+      "产品设计",
+      "深度学习",
+      "JavaScript",
+      "MySQL",
+      "Go",
+      "Docker"
+    ]
+  },
+  {
+    "id": "RS-17",
+    "file": "eval_resumes/RS-17_何勇.txt",
+    "format": "txt",
+    "variant": 1,
+    "ground_truth": {
+      "name": "何勇",
+      "phone": "13616059202",
+      "email": "user16@test.cn",
+      "education": "博士",
+      "major": "自动化",
+      "years_experience": 3
+    },
+    "expected_skills": [
+      "MySQL",
+      "需求分析",
+      "Kubernetes",
+      "Docker",
+      "Go"
+    ]
+  },
+  {
+    "id": "RS-18",
+    "file": "eval_resumes/RS-18_高翔.txt",
+    "format": "txt",
+    "variant": 2,
+    "ground_truth": {
+      "name": "高翔",
+      "phone": "13717062902",
+      "email": "user17@example.com",
+      "education": "硕士",
+      "major": "统计学",
+      "years_experience": 4
+    },
+    "expected_skills": [
+      "TensorFlow",
+      "PyTorch",
+      "机器学习",
+      "深度学习",
+      "SQL",
+      "Kubernetes"
+    ]
+  },
+  {
+    "id": "RS-19",
+    "file": "eval_resumes/RS-19_林雪.txt",
+    "format": "txt",
+    "variant": 2,
+    "ground_truth": {
+      "name": "林雪",
+      "phone": "13818066602",
+      "email": "user18@test.cn",
+      "education": "硕士",
+      "major": "网络工程",
+      "years_experience": 5
+    },
+    "expected_skills": [
+      "大模型",
+      "TensorFlow",
+      "Kubernetes",
+      "Redis",
+      "产品设计",
+      "JavaScript"
+    ]
+  },
+  {
+    "id": "RS-20",
+    "file": "eval_resumes/RS-20_罗浩.txt",
+    "format": "txt",
+    "variant": 3,
+    "ground_truth": {
+      "name": "罗浩",
+      "phone": "13919070302",
+      "email": "user19@mail.com",
+      "education": "本科",
+      "major": "数据科学",
+      "years_experience": 5
+    },
+    "expected_skills": [
+      "机器学习",
+      "Redis",
+      "JavaScript"
+    ]
+  },
+  {
+    "id": "RS-21",
+    "file": "eval_resumes/RS-21_郑爽.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "郑爽",
+      "phone": "13620074002",
+      "email": "user20@test.cn",
+      "education": "本科",
+      "major": "计算机科学与技术",
+      "years_experience": 6
+    },
+    "expected_skills": [
+      "机器学习",
+      "React",
+      "需求分析",
+      "SQL",
+      "产品设计"
+    ]
+  },
+  {
+    "id": "RS-22",
+    "file": "eval_resumes/RS-22_梁宇.txt",
+    "format": "txt",
+    "variant": 0,
+    "ground_truth": {
+      "name": "梁宇",
+      "phone": "13721077702",
+      "email": "user21@example.com",
+      "education": "本科",
+      "major": "软件工程",
+      "years_experience": 7
+    },
+    "expected_skills": [
+      "数据分析",
+      "SQL",
+      "大模型",
+      "机器学习",
+      "React"
+    ]
+  },
+  {
+    "id": "RS-23",
+    "file": "eval_resumes/RS-23_谢楠.docx",
+    "format": "docx",
+    "variant": 0,
+    "ground_truth": {
+      "name": "谢楠",
+      "phone": "13822081402",
+      "email": "user22@test.cn",
+      "education": "本科",
+      "major": "人工智能",
+      "years_experience": 8
+    },
+    "expected_skills": [
+      "深度学习",
+      "Docker",
+      "SQL",
+      "数据分析"
+    ]
+  },
+  {
+    "id": "RS-24",
+    "file": "eval_resumes/RS-24_唐倩.docx",
+    "format": "docx",
+    "variant": 0,
+    "ground_truth": {
+      "name": "唐倩",
+      "phone": "13923085102",
+      "email": "user23@example.com",
+      "education": "大专",
+      "major": "信息管理",
+      "years_experience": 10
+    },
+    "expected_skills": [
+      "项目管理",
+      "Python",
+      "机器学习",
+      "Docker",
+      "React"
+    ]
+  },
+  {
+    "id": "RS-25",
+    "file": "eval_resumes/RS-25_许巍.docx",
+    "format": "docx",
+    "variant": 1,
+    "ground_truth": {
+      "name": "许巍",
+      "phone": "13624088803",
+      "email": "user24@example.com",
+      "education": "博士",
+      "major": "电子信息",
+      "years_experience": 0
+    },
+    "expected_skills": [
+      "Go",
+      "MySQL",
+      "TensorFlow"
+    ]
+  },
+  {
+    "id": "RS-26",
+    "file": "eval_resumes/RS-26_邓超.docx",
+    "format": "docx",
+    "variant": 1,
+    "ground_truth": {
+      "name": "邓超",
+      "phone": "13725092503",
+      "email": "user25@example.com",
+      "education": "硕士",
+      "major": "数学与应用数学",
+      "years_experience": 1
+    },
+    "expected_skills": [
+      "TensorFlow",
+      "Redis",
+      "深度学习",
+      "MySQL",
+      "项目管理",
+      "JavaScript"
+    ]
+  },
+  {
+    "id": "RS-27",
+    "file": "eval_resumes/RS-27_曹阳.docx",
+    "format": "docx",
+    "variant": 1,
+    "ground_truth": {
+      "name": "曹阳",
+      "phone": "13826096203",
+      "email": "user26@example.com",
+      "education": "硕士",
+      "major": "自动化",
+      "years_experience": 2
+    },
+    "expected_skills": [
+      "数据分析",
+      "需求分析",
+      "Java",
+      "Redis",
+      "React"
+    ]
+  },
+  {
+    "id": "RS-28",
+    "file": "eval_resumes/RS-28_彭博.docx",
+    "format": "docx",
+    "variant": 2,
+    "ground_truth": {
+      "name": "彭博",
+      "phone": "13927099903",
+      "email": "user27@mail.com",
+      "education": "本科",
+      "major": "统计学",
+      "years_experience": 3
+    },
+    "expected_skills": [
+      "产品设计",
+      "数据分析",
+      "大模型",
+      "机器学习",
+      "Go"
+    ]
+  },
+  {
+    "id": "RS-29",
+    "file": "eval_resumes/RS-29_曾毅.pdf",
+    "format": "pdf",
+    "variant": 2,
+    "ground_truth": {
+      "name": "曾毅",
+      "phone": "13628103603",
+      "email": "user28@example.com",
+      "education": "本科",
+      "major": "网络工程",
+      "years_experience": 3
+    },
+    "expected_skills": [
+      "Vue",
+      "Python",
+      "Redis"
+    ]
+  },
+  {
+    "id": "RS-30",
+    "file": "eval_resumes/RS-30_肖楠.pdf",
+    "format": "pdf",
+    "variant": 3,
+    "ground_truth": {
+      "name": "肖楠",
+      "phone": "13729107303",
+      "email": "user29@example.com",
+      "education": "本科",
+      "major": "数据科学",
+      "years_experience": 4
+    },
+    "expected_skills": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Go"
+    ]
+  },
+  {
+    "id": "RS-31",
+    "file": "eval_resumes/RS-31_田莉.pdf",
+    "format": "pdf",
+    "variant": 0,
+    "ground_truth": {
+      "name": "田莉",
+      "phone": "13830111003",
+      "email": "user30@example.com",
+      "education": "本科",
+      "major": "计算机科学与技术",
+      "years_experience": 5
+    },
+    "expected_skills": [
+      "Vue",
+      "TensorFlow",
+      "数据分析"
+    ]
+  },
+  {
+    "id": "RS-32",
+    "file": "eval_resumes/RS-32_董浩.pdf",
+    "format": "pdf",
+    "variant": 0,
+    "ground_truth": {
+      "name": "董浩",
+      "phone": "13931114704",
+      "email": "user31@example.com",
+      "education": "大专",
+      "major": "软件工程",
+      "years_experience": 5
+    },
+    "expected_skills": [
+      "项目管理",
+      "Java",
+      "Redis",
+      "深度学习",
+      "大模型"
+    ]
+  }
+]

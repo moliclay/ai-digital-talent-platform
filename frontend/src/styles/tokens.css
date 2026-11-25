@@ -1,0 +1,538 @@
+/* 由 scripts/build-tokens.mjs 从 tokens.json 生成，不要手改。 */
+
+:root {
+  color-scheme: light;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #64748b;
+  --text-disabled: #94a3b8;
+  --text-on-action: #ffffff;
+  --text-link: #4f46e5; /* taste-skill-ignore: Corporate Trust 品牌主色 */
+  --text-link-hover: #4338ca;
+  --text-on-dark: #ffffff;
+  --text-on-destructive: #ffffff;
+  --text-secondary-strong: #334155;
+  --surface-page: #f8fafc;
+  --surface-card: #ffffff;
+  --surface-raised: #f8fafc;
+  --surface-sunken: #f1f5f9;
+  --surface-overlay: rgba(15, 23, 42, 0.45);
+  --surface-disabled: #f1f5f9;
+  --border-default: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --border-focus: #4f46e5; /* taste-skill-ignore: Corporate Trust 品牌主色 */
+  --border-error: #dc2626;
+  --border-disabled: #e2e8f0;
+  --action-primary: #4f46e5; /* taste-skill-ignore: Corporate Trust 品牌主色 */
+  --action-primary-hover: #4338ca;
+  --action-primary-active: #3730a3;
+  --action-secondary: #ffffff;
+  --action-secondary-hover: #f8fafc;
+  --action-secondary-active: #f1f5f9;
+  --action-destructive: #dc2626;
+  --action-destructive-hover: #b91c1c;
+  --action-destructive-active: #b91c1c;
+  --feedback-success-bg: #ecfdf5;
+  --feedback-success-text: #047857;
+  --feedback-success-border: #d1fae5;
+  --feedback-success-icon: #059669;
+  --feedback-warning-bg: #fef3c7;
+  --feedback-warning-text: #b45309;
+  --feedback-warning-border: #fef3c7;
+  --feedback-warning-icon: #f59e0b;
+  --feedback-error-bg: #fef2f2;
+  --feedback-error-text: #b91c1c;
+  --feedback-error-border: #fecaca;
+  --feedback-error-icon: #dc2626;
+  --feedback-info-bg: #e0f2fe;
+  --feedback-info-text: #0369a1;
+  --feedback-info-border: #e0f2fe;
+  --feedback-info-icon: #0ea5e9;
+  --interactive-hover-overlay: rgba(15, 23, 42, 0.04);
+  --interactive-active-overlay: rgba(15, 23, 42, 0.07);
+  --interactive-selected-bg: #eef2ff;
+  --interactive-selected-border: #c7d2fe;
+  --interactive-selected-text: #4338ca;
+  --interactive-focus-ring: rgba(79, 70, 229, 0.25);
+  --data-series-1: #4f46e5; /* taste-skill-ignore: Corporate Trust 品牌主色 */
+  --data-series-2: #7c3aed; /* taste-skill-ignore: Corporate Trust 品牌主色 */
+  --data-grid: #e2e8f0;
+  --data-axis: #cbd5e1;
+  --data-span: #f1f5f9;
+  --data-positive: #059669;
+  --data-negative: #dc2626;
+  --data-neutral: #64748b;
+  --font-family-sans: "Plus Jakarta Sans", MiSans, "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; /* taste-skill-ignore: 等宽只用于 ID 与代码 */
+  --font-family-display: "Plus Jakarta Sans", MiSans, "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-micro: 11px;
+  --font-meta: 12px;
+  --font-body: 14px;
+  --font-read: 16px;
+  --font-card: 16px;
+  --font-section: 18px;
+  --font-page: 24px;
+  --font-display: 32px;
+  --font-hero: 56px;
+  --font-hero-mobile: 38px;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --leading-display: 1.2;
+  --leading-page: 1.25;
+  --leading-section: 1.35;
+  --leading-body: 1.45;
+  --leading-meta: 1.4;
+  --tracking-display: -0.02em;
+  --tracking-normal: 0em;
+  --space-none: 0px;
+  --space-hair: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 20px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 40px;
+  --space-4xl: 48px;
+  --space-5xl: 64px;
+  --radius-chip: 6px;
+  --radius-control: 8px;
+  --radius-card: 12px;
+  --radius-dialog: 16px;
+  --radius-pill: 999px;
+  --border-width-hairline: 1px;
+  --border-width-focus: 2px;
+  --shadow-none: none;
+  --shadow-menu: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --shadow-dialog: 0 24px 64px rgba(15, 23, 42, 0.16);
+  --shadow-toast: 0 12px 32px rgba(15, 23, 42, 0.12);
+  --motion-instant: 0ms;
+  --motion-fast: 90ms;
+  --motion-base: 140ms;
+  --motion-slow: 220ms;
+  --motion-spin: 800ms;
+  --motion-press: 140ms;
+  --motion-hover: 180ms;
+  --motion-ui: 240ms;
+  --motion-view: 320ms;
+  --motion-reveal: 620ms;
+  --motion-stagger-item: 70ms;
+  --motion-stagger-line: 90ms;
+  --motion-count: 900ms;
+  --motion-delay-tag: 110ms;
+  --motion-delay-title: 165ms;
+  --motion-delay-lede: 220ms;
+  --motion-delay-features: 275ms;
+  --motion-delay-stats: 330ms;
+  --motion-delay-preview: 390ms;
+  --motion-delay-panel: 165ms;
+  --motion-delay-account: 420ms;
+  --motion-delay-bar: 520ms;
+  --motion-item: 420ms;
+  --ease-enter: cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-linear: cubic-bezier(0, 0, 1, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --motion-distance-rise: 18px;
+  --motion-distance-rise-sm: 10px;
+  --layout-sidebar: 232px;
+  --layout-content: 1180px;
+  --layout-panel: 420px;
+  --layout-page-gutter: 24px;
+  --layout-phone-gutter: 16px;
+  --layout-card-pad: 20px;
+  --layout-card-gap: 16px;
+  --layout-section-gap: 32px;
+  --layout-control-height: 32px;
+  --layout-form-height: 40px;
+  --layout-touch: 44px;
+  --layout-row-height: 48px;
+  --layout-topbar-height: 48px;
+  --layout-wide: 1600px;
+  --layout-radar: 320px;
+  --layout-radar-compact: 260px;
+  --z-base: 0;
+  --z-nav: 10;
+  --z-dropdown: 100;
+  --z-overlay: 200;
+  --z-dialog: 300;
+  --z-toast: 400;
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --enterprise-bg: #f8fafc; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-surface: #ffffff; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-text: #0f172a; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-muted: #64748b; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-muted-light: #94a3b8; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-border: #e2e8f0; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-border-strong: #94a3b8; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-primary: #4f46e5; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */ /* taste-skill-ignore: Corporate Trust 品牌主色 */
+  --enterprise-primary-strong: #4338ca; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-primary-soft: #eef2ff; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-primary-soft-strong: #e0e7ff; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-secondary: #7c3aed; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */ /* taste-skill-ignore: Corporate Trust 品牌主色 */
+  --enterprise-secondary-soft: #f5f3ff; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-secondary-soft-strong: #ede9fe; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-success: #10b981; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-success-soft: #ecfdf5; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-danger: #dc2626; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-danger-soft: #fef2f2; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-on-primary: #ffffff; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-gradient-primary: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */ /* taste-skill-ignore: Corporate Trust 品牌主色 */
+  --enterprise-gradient-text: linear-gradient(135deg, #4f46e5 0%, #7c3aed 55%, #a855f7 100%); /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */ /* taste-skill-ignore: Corporate Trust 品牌主色 */
+  --enterprise-gradient-soft: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 55%, #fdf4ff 100%); /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.05); /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-shadow-hover: 0 6px 16px -4px rgba(79, 70, 229, 0.18); /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-shadow-button: 0 2px 8px rgba(79, 70, 229, 0.18); /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-shadow-glow: 0 0 20px rgba(79, 70, 229, 0.50); /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-radius-card: 12px; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-radius-control: 8px; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-radius-pill: 999px; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-success-strong: #047857; /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --enterprise-shadow-subtle: 0 1px 2px rgba(15, 23, 42, 0.05); /* taste-skill-ignore: Corporate Trust 设计规范要求品牌渐变与彩色阴影 */
+  --glass-page-bg: radial-gradient(ellipse at 12% 8%, rgba(56,189,248,.18), transparent 42%), radial-gradient(ellipse at 88% 84%, rgba(79,209,197,.16), transparent 48%), linear-gradient(160deg, #070b14 0%, #04070e 100%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-spot-a: radial-gradient(circle, rgba(56,189,248,.34) 0%, rgba(56,189,248,0) 70%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-spot-b: radial-gradient(circle, rgba(79,209,197,.28) 0%, rgba(79,209,197,0) 72%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-spot-c: radial-gradient(circle, rgba(59,130,246,.14) 0%, rgba(59,130,246,0) 70%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-spot-blur: blur(110px); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-noise-opacity: 0.22; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-noise-size: 180px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-1-bg: linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.022)); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-1-blur: blur(18px) saturate(140%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-1-border: rgba(255,255,255,.10); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-2-bg: linear-gradient(180deg, rgba(255,255,255,.095), rgba(255,255,255,.035)); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-2-blur: blur(24px) saturate(155%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-2-border: rgba(255,255,255,.16); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-3-bg: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.06)); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-3-blur: blur(34px) saturate(170%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-3-border: rgba(255,255,255,.24); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-highlight: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-shadow-1: 0 1px 0 rgba(255,255,255,.10) inset, 0 -1px 0 rgba(0,0,0,.35) inset, 0 2px 6px rgba(0,0,0,.28), 0 18px 40px -18px rgba(0,0,0,.70); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-shadow-2: 0 1px 0 rgba(255,255,255,.16) inset, 0 -1px 0 rgba(0,0,0,.40) inset, 0 4px 10px rgba(0,0,0,.35), 0 28px 60px -22px rgba(0,0,0,.80); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-ink: #eef3fb; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-ink-2: #a8b6cc; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-ink-3: #6b7a92; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent: #4fd1c5; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-strong: #6ee7da; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-ink: #06201d; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-soft: rgba(79,209,197,.14); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-line: rgba(79,209,197,.42); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-warn: #f2b45c; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-danger: #f4736f; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-danger-bg: rgba(244,115,111,.10); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-danger-border: rgba(244,115,111,.30); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-field-bg: rgba(255,255,255,.05); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-field-border: rgba(255,255,255,.09); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-field-focus: rgba(79,209,197,.70); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-button-bg: linear-gradient(180deg, #6ee7da, #3fbfb4); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-button-hover: linear-gradient(180deg, #86f0e4, #4fd1c5); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-button-shadow: 0 1px 0 rgba(255,255,255,.45) inset, 0 8px 20px -8px rgba(79,209,197,.55); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-focus-ring: 0 0 0 3px rgba(79,209,197,.18); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-radius-sm: 10px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-radius-md: 16px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-radius-lg: 22px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-radius-pill: 999px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-fallback-bg: rgba(11,17,28,.96); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-line-soft: rgba(255,255,255,.06); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-row-hover: rgba(255,255,255,.045); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-a: #1d4ed8; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-b: #0f766e; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-c: #0e3b57; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-blur: blur(80px); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-opacity: 0.55; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-drift-a: 26s; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-drift-b: 32s; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-drift-c: 38s; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-warn-soft: rgba(242,180,92,.12); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-neutral-soft: rgba(255,255,255,.06); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-glow: 10px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-overlay: rgba(4,7,14,.68); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-card-tint: rgba(4,7,14,.22); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-control-bg: rgba(255,255,255,.07); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-control-hover: rgba(255,255,255,.11); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-text: #4fd1c5; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-overlay-blur: blur(6px); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --button-height: var(--layout-control-height);
+  --button-padding-x: var(--space-sm);
+  --button-gap: var(--space-xs);
+  --button-radius: var(--radius-control);
+  --button-font-size: var(--font-body);
+  --button-primary-bg: var(--action-primary);
+  --button-primary-bg-hover: var(--action-primary-hover);
+  --button-primary-bg-active: var(--action-primary-active);
+  --button-primary-text: var(--text-on-action);
+  --button-secondary-bg: var(--action-secondary);
+  --button-secondary-bg-hover: var(--action-secondary-hover);
+  --button-secondary-border: var(--border-strong);
+  --button-secondary-text: var(--text-primary);
+  --button-ghost-bg: transparent;
+  --button-ghost-bg-hover: var(--interactive-hover-overlay);
+  --button-ghost-text: var(--text-secondary);
+  --button-destructive-bg: var(--action-destructive);
+  --button-destructive-bg-hover: var(--action-destructive-hover);
+  --button-destructive-text: var(--text-on-destructive);
+  --button-disabled-bg: var(--surface-disabled);
+  --button-disabled-text: var(--text-disabled);
+  --button-disabled-border: var(--border-disabled);
+  --input-height: var(--layout-form-height);
+  --input-padding-x: var(--space-sm);
+  --input-radius: var(--radius-control);
+  --input-bg: var(--surface-card);
+  --input-bg-disabled: var(--surface-disabled);
+  --input-border: var(--border-strong);
+  --input-border-hover: var(--text-secondary);
+  --input-border-focus: var(--border-focus);
+  --input-border-error: var(--border-error);
+  --input-text: var(--text-primary);
+  --input-placeholder: var(--text-tertiary);
+  --table-header-height: 40px;
+  --table-row-height: var(--layout-row-height);
+  --table-header-text: var(--text-secondary);
+  --table-cell-text: var(--text-primary);
+  --table-cell-secondary: var(--text-secondary);
+  --table-rule: var(--border-default);
+  --table-header-rule: var(--border-default);
+  --table-row-hover: var(--interactive-hover-overlay);
+  --table-row-selected: var(--interactive-selected-bg);
+  --table-sort-active: var(--text-primary);
+  --nav-width: var(--layout-sidebar);
+  --nav-row-height: 32px;
+  --nav-item-text: var(--text-secondary);
+  --nav-item-text-active: var(--interactive-selected-text);
+  --nav-item-bg-active: var(--interactive-selected-bg);
+  --nav-item-indicator: var(--data-series-1);
+  --nav-item-icon: var(--text-secondary);
+  --nav-group-label: var(--text-tertiary);
+  --nav-badge-bg: var(--feedback-info-bg);
+  --nav-badge-text: var(--feedback-info-text);
+  --dialog-bg: var(--surface-card);
+  --dialog-border: var(--border-default);
+  --dialog-shadow: var(--shadow-dialog);
+  --dialog-radius: var(--radius-dialog);
+  --dialog-width-sm: 480px;
+  --dialog-width-md: 640px;
+  --dialog-width-lg: 880px;
+  --dialog-padding: var(--space-xl);
+  --drawer-width: 480px;
+  --drawer-bg: var(--surface-card);
+  --drawer-border: var(--border-default);
+  --drawer-shadow: var(--shadow-dialog);
+  --toast-bg: var(--surface-raised);
+  --toast-border: var(--border-default);
+  --toast-text: var(--text-primary);
+  --toast-shadow: var(--shadow-toast);
+  --toast-width: 420px;
+  --toast-duration: 6000ms;
+  --badge-height: 20px;
+  --badge-radius: var(--radius-chip);
+  --badge-font-size: var(--font-micro);
+  --badge-neutral-bg: var(--surface-sunken);
+  --badge-neutral-text: var(--text-secondary-strong);
+  --badge-success-bg: var(--feedback-success-bg);
+  --badge-success-text: var(--feedback-success-text);
+  --badge-warning-bg: var(--feedback-warning-bg);
+  --badge-warning-text: var(--feedback-warning-text);
+  --badge-error-bg: var(--feedback-error-bg);
+  --badge-error-text: var(--feedback-error-text);
+  --badge-info-bg: var(--feedback-info-bg);
+  --badge-info-text: var(--feedback-info-text);
+  --checkbox-size: 20px;
+  --checkbox-radius: var(--radius-chip);
+  --checkbox-bg: var(--surface-card);
+  --checkbox-border: var(--border-strong);
+  --checkbox-checked-bg: var(--action-primary);
+  --checkbox-checked-text: var(--text-on-action);
+  --checkbox-disabled-bg: var(--surface-disabled);
+  --switch-width: 32px;
+  --switch-height: 20px;
+  --switch-thumb: 16px;
+  --switch-track-off: var(--surface-sunken);
+  --switch-track-on: var(--action-primary);
+  --switch-thumb-color: var(--surface-card);
+  --tooltip-bg: var(--surface-raised);
+  --tooltip-text: var(--text-primary);
+  --tooltip-border: var(--border-default);
+  --tooltip-radius: var(--radius-control);
+  --tooltip-padding-x: var(--space-xs);
+  --tooltip-padding-y: var(--space-2xs);
+  --pagination-height: var(--layout-control-height);
+  --pagination-text: var(--text-secondary);
+  --pagination-text-strong: var(--text-primary);
+  --pagination-gap: var(--space-xs);
+  --kpi-label: var(--text-secondary);
+  --kpi-value: var(--text-primary);
+  --kpi-divider: var(--border-default);
+  --kpi-label-size: var(--font-meta);
+  --kpi-value-size: var(--font-page);
+  --dropzone-border: var(--border-strong);
+  --dropzone-bg: var(--surface-sunken);
+  --dropzone-text: var(--text-secondary);
+  --dropzone-active-border: var(--border-focus);
+  --dropzone-radius: var(--radius-card);
+  --dropzone-padding: var(--space-2xl);
+  --avatar-size: 32px;
+  --avatar-bg: var(--surface-sunken);
+  --avatar-text: var(--text-secondary);
+  --avatar-radius: var(--radius-pill);
+  --tabs-height: 40px;
+  --tabs-indicator: 2px;
+  --tabs-indicator-color: var(--text-primary);
+  --tabs-text: var(--text-secondary);
+  --tabs-text-active: var(--text-primary);
+  --tabs-rule: var(--border-default);
+  --progress-height: 8px;
+  --progress-track: var(--surface-sunken);
+  --progress-fill: var(--data-series-1);
+  --progress-pass: var(--data-positive);
+  --progress-fail: var(--data-negative);
+  --score-bar-height: 4px;
+  --score-threshold-height: 2px;
+  --score-track: var(--surface-sunken);
+  --score-fill: var(--data-series-1);
+  --score-threshold: var(--text-primary);
+  --score-pass-text: var(--data-positive);
+  --score-fail-text: var(--data-negative);
+  --skeleton-bg: var(--surface-sunken);
+  --empty-border: var(--border-default);
+  --empty-text: var(--text-secondary);
+  --shell-bg: var(--surface-page);
+  --shell-sidebar-bg: var(--surface-card);
+  --shell-sidebar-border: var(--border-default);
+  --shell-topbar-height: var(--layout-topbar-height);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --text-primary: #f2f4f5;
+  --text-secondary: #b4b9bf;
+  --text-tertiary: #8b929a;
+  --text-disabled: #6a717a;
+  --text-on-action: #0b0d0f;
+  --text-link: #5cd4f5;
+  --text-link-hover: #93e4fa;
+  --text-on-dark: #f2f4f5;
+  --surface-page: #191d20;
+  --surface-card: #121517;
+  --surface-raised: #23282c;
+  --surface-sunken: #08090a;
+  --surface-overlay: rgba(0, 0, 0, 0.64);
+  --surface-disabled: #23282c;
+  --border-default: #2a3036;
+  --border-strong: #6a717a;
+  --border-focus: #5cd4f5;
+  --border-error: #f3a1a1;
+  --border-disabled: #2a3036;
+  --action-primary: #f2f4f5;
+  --action-primary-hover: #dcdfe3;
+  --action-primary-active: #c2c7cd;
+  --action-secondary: #1d2226;
+  --action-secondary-hover: #23282c;
+  --action-secondary-active: #2a3036;
+  --action-destructive: #c8404f;
+  --action-destructive-hover: #d9576b;
+  --action-destructive-active: #ef8a95;
+  --feedback-success-bg: #172a1d;
+  --feedback-success-text: #7ad9a6;
+  --feedback-success-border: #1b7f50;
+  --feedback-success-icon: #7ad9a6;
+  --feedback-warning-bg: #3a2603;
+  --feedback-warning-text: #f5cf7a;
+  --feedback-warning-border: #a56c07;
+  --feedback-warning-icon: #f5cf7a;
+  --feedback-error-bg: #3d0f12;
+  --feedback-error-text: #f3a1a1;
+  --feedback-error-border: #c8404f;
+  --feedback-error-icon: #ef8a95;
+  --feedback-info-bg: #06222d;
+  --feedback-info-text: #93e4fa;
+  --feedback-info-border: #0a6a8c;
+  --feedback-info-icon: #5cd4f5;
+  --interactive-hover-overlay: rgba(255, 255, 255, 0.06);
+  --interactive-active-overlay: rgba(255, 255, 255, 0.11);
+  --interactive-selected-bg: #06222d;
+  --interactive-selected-border: #0a6a8c;
+  --interactive-selected-text: #f2f4f5;
+  --interactive-focus-ring: #5cd4f5;
+  --data-series-1: #35c2f2;
+  --data-series-2: #b4b9bf;
+  --data-grid: #23282c;
+  --data-axis: #8b929a;
+  --data-span: rgba(53, 194, 242, 0.14);
+  --data-positive: #7ad9a6;
+  --data-negative: #f3a1a1;
+  --data-neutral: #b4b9bf;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --glass-page-bg: radial-gradient(920px 620px at 6% -12%, #daeaff 0%, transparent 62%), radial-gradient(820px 560px at 94% 2%, #e0f6ee 0%, transparent 60%), radial-gradient(900px 720px at 58% 112%, #fff0e2 0%, transparent 64%), linear-gradient(160deg, #f8fbff 0%, #f4f7fb 100%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-spot-a: radial-gradient(circle, rgba(185,213,255,.55) 0%, rgba(185,213,255,0) 70%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-spot-b: radial-gradient(circle, rgba(182,235,217,.55) 0%, rgba(182,235,217,0) 72%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-spot-c: radial-gradient(circle, rgba(255,225,194,.45) 0%, rgba(255,225,194,0) 70%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-spot-blur: blur(90px); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-noise-opacity: 0; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-noise-size: 180px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-1-bg: linear-gradient(180deg, rgba(255,255,255,.62), rgba(255,255,255,.44)); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-1-blur: blur(20px) saturate(175%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-1-border: rgba(255,255,255,.92); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-2-bg: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.64)); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-2-blur: blur(26px) saturate(185%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-2-border: #ffffff; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-3-bg: linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,255,255,.82)); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-3-blur: blur(34px) saturate(195%); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-layer-3-border: #ffffff; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-highlight: linear-gradient(90deg, transparent, rgba(255,255,255,.98), transparent); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-shadow-1: inset 0 1px 0 rgba(255,255,255,.98), 0 1px 2px rgba(15,23,42,.06), 0 6px 16px -8px rgba(15,23,42,.10), 0 18px 38px -18px rgba(15,23,42,.24), 0 0 0 1px rgba(15,23,42,.09); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-shadow-2: inset 0 1px 0 #ffffff, 0 2px 6px rgba(15,23,42,.08), 0 10px 24px -12px rgba(15,23,42,.14), 0 34px 64px -26px rgba(15,23,42,.32), 0 0 0 1px rgba(15,23,42,.11); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-ink: #0f172a; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-ink-2: #4a5768; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-ink-3: #8895a8; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent: #0f766e; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-strong: #0d9488; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-ink: #ffffff; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-soft: rgba(13,148,136,.10); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-line: rgba(13,148,136,.30); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-warn: #c2740a; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-danger: #d13b3b; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-danger-bg: rgba(209,59,59,.08); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-danger-border: rgba(209,59,59,.26); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-field-bg: rgba(255,255,255,.62); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-field-border: rgba(15,23,42,.16); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-field-focus: rgba(13,148,136,.65); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-button-bg: #0f766e; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-button-hover: #0d9488; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-button-shadow: inset 0 1px 0 rgba(255,255,255,.48), 0 5px 14px -8px rgba(15,118,110,.55); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-focus-ring: 0 0 0 3px rgba(13,148,136,.16); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-radius-sm: 10px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-radius-md: 16px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-radius-lg: 22px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-radius-pill: 999px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-fallback-bg: rgba(255,255,255,.95); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-line-soft: rgba(15,23,42,.10); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-row-hover: rgba(255,255,255,.72); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-a: #b9d5ff; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-b: #b6ebd9; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-c: #ffe1c2; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-blur: blur(90px); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-blob-opacity: 0.42; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-drift-a: 26s; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-drift-b: 32s; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-drift-c: 38s; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-warn-soft: rgba(194,116,10,.10); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-neutral-soft: rgba(255,255,255,.55); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-glow: 0px; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-overlay: rgba(15,23,42,.24); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-card-tint: transparent; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-control-bg: rgba(255,255,255,.68); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-control-hover: #ffffff; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-accent-text: #0f766e; /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+  --glass-overlay-blur: blur(8px); /* taste-skill-ignore: Glass 设计规范要求分层玻璃与光斑 */
+}

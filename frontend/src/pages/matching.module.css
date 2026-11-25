@@ -1,0 +1,393 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.bannerOk,
+.bannerError {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-control);
+  font-size: var(--font-meta);
+}
+
+.bannerOk {
+  background: var(--feedback-success-bg);
+  border: var(--border-width-hairline) solid var(--feedback-success-border);
+  color: var(--feedback-success-text);
+}
+
+.bannerError {
+  background: var(--feedback-error-bg);
+  border: var(--border-width-hairline) solid var(--feedback-error-border);
+  color: var(--feedback-error-text);
+}
+
+.jobPicker {
+  width: calc(var(--space-5xl) * 4);
+}
+
+.summaryWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.summaryNote {
+  margin: 0;
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  overflow: hidden;
+  background: var(--surface-card);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--radius-card);
+}
+
+.summaryCell {
+  padding: var(--space-md) var(--space-lg);
+  border-left: var(--border-width-hairline) solid var(--border-default);
+}
+
+.summaryCell:first-child {
+  border-left: 0;
+}
+
+.summaryLabel {
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.summaryValue {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2xs);
+  margin: var(--space-2xs) 0 0;
+  font-size: var(--font-section);
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+
+.summaryUnit {
+  font-size: var(--font-meta);
+  font-weight: var(--weight-regular);
+  color: var(--text-tertiary);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg) var(--space-sm);
+}
+
+.filters {
+  display: inline-flex;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs);
+  background: var(--surface-sunken);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.filterButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  min-height: var(--layout-control-height);
+  padding: 0 var(--space-sm);
+  border-radius: var(--radius-control);
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.filterButton:hover {
+  color: var(--text-primary);
+  background: var(--interactive-hover-overlay);
+}
+
+.filterActive,
+.filterActive:hover {
+  background: var(--surface-card);
+  color: var(--text-primary);
+  outline: var(--border-width-hairline) solid var(--interactive-selected-border);
+  outline-offset: calc(var(--border-width-hairline) * -1);
+}
+
+.filterCount {
+  font-size: var(--font-micro);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-tertiary);
+}
+
+.filterActive .filterCount {
+  color: var(--text-secondary);
+}
+
+.name {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nameLink {
+  display: block;
+  max-width: 100%;
+  min-height: var(--layout-control-height);
+  overflow: hidden;
+  font-weight: var(--weight-medium);
+  line-height: var(--layout-control-height);
+  color: var(--text-link);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nameLink:hover {
+  color: var(--text-link-hover);
+  text-decoration: underline;
+  text-underline-offset: var(--space-hair);
+}
+
+.reason {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--text-secondary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stateWrap {
+  padding: var(--space-lg);
+}
+
+.emptyWrap {
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 var(--space-lg) var(--space-lg);
+}
+
+.skeletonStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+@media (max-width: 1100px) {
+  .jobPicker {
+    width: calc(var(--space-5xl) * 3);
+  }
+
+  .summaryCell {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .summaryValue {
+    font-size: var(--font-body);
+  }
+}
+
+@media (max-width: 760px) {
+  .summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .summaryCell:nth-child(4) {
+    border-left: 0;
+    border-top: var(--border-width-hairline) solid var(--border-default);
+  }
+
+  .summaryCell:nth-child(5) {
+    border-top: var(--border-width-hairline) solid var(--border-default);
+  }
+
+  .jobPicker {
+    width: 100%;
+  }
+}
+
+/* Glass matching scope: mounted only when AppShell adds .glass-app / glass-route. */
+.page {
+  gap: var(--space-lg);
+}
+
+.pageHead {
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-width-hairline) solid var(--glass-layer-2-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-2-bg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  animation: matchRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-tag) backwards;
+}
+
+.pageHead h1 {
+  font-size: var(--font-read);
+  line-height: var(--leading-section);
+  letter-spacing: var(--tracking-normal);
+  color: var(--glass-ink);
+}
+
+.pageHead p {
+  max-width: 72ch;
+  margin-top: var(--space-2xs);
+  font-size: var(--font-meta);
+  line-height: var(--leading-meta);
+  color: var(--glass-ink-2);
+}
+
+.summary {
+  background: var(--glass-layer-2-bg);
+  border-color: var(--glass-layer-2-border);
+  border-radius: var(--glass-radius-lg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 匹配概览 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 匹配概览 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 匹配概览 */
+  animation: matchRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-panel) backwards;
+}
+
+.summaryCell {
+  border-left-color: var(--glass-line-soft);
+}
+
+.summaryLabel {
+  color: var(--glass-ink-2);
+}
+
+.summaryValue {
+  color: var(--glass-ink);
+}
+
+.summaryUnit,
+.summaryNote {
+  color: var(--glass-ink-2);
+}
+
+.glassTable {
+  animation: matchRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-preview) backwards;
+}
+
+.toolbar {
+  padding: var(--space-md) var(--space-lg) var(--space-sm);
+}
+
+.filters {
+  background: var(--glass-field-bg);
+  border-color: var(--glass-field-border);
+}
+
+.filterButton {
+  color: var(--glass-ink-2);
+}
+
+.filterButton:hover {
+  color: var(--glass-ink);
+  background: var(--glass-row-hover);
+}
+
+.filterActive,
+.filterActive:hover {
+  background: var(--glass-accent-soft);
+  color: var(--glass-accent);
+  outline-color: var(--glass-accent-line);
+}
+
+.filterCount {
+  color: var(--glass-ink-3);
+}
+
+.filterActive .filterCount {
+  color: var(--glass-accent);
+}
+
+.nameLink {
+  color: var(--glass-accent);
+}
+
+.nameLink:hover {
+  color: var(--glass-accent-strong);
+}
+
+.reason,
+.time {
+  color: var(--glass-ink-2);
+}
+
+.emptyWrap,
+.stateWrap,
+.pagination {
+  color: var(--glass-ink-2);
+}
+
+.bannerOk,
+.bannerError {
+  border-radius: var(--glass-radius-sm);
+}
+
+@keyframes matchRise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--motion-rise), 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .pageHead {
+    padding: var(--space-md);
+  }
+
+  .pageHead h1 {
+    font-size: var(--font-section);
+  }
+
+  .summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .summaryCell:nth-child(3) {
+    border-top: var(--border-width-hairline) solid var(--glass-line-soft);
+    border-left: 0;
+  }
+
+  .summaryCell:nth-child(4) {
+    border-top: var(--border-width-hairline) solid var(--glass-line-soft);
+    border-left: var(--border-width-hairline) solid var(--glass-line-soft);
+  }
+
+  .summaryCell:nth-child(5) {
+    grid-column: 1 / -1;
+    border-top: var(--border-width-hairline) solid var(--glass-line-soft);
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageHead,
+  .summary,
+  .glassTable {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

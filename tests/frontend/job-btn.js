@@ -1,0 +1,1 @@
+(() => [...document.querySelectorAll('button')].filter(b=>(b.innerText||'').trim()==='搜索').map(b=>{const s=getComputedStyle(b);return {bg:s.backgroundColor,color:s.color,border:s.borderTopColor};}))()

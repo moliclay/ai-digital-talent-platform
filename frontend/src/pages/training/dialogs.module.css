@@ -1,0 +1,165 @@
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.formError {
+  margin: var(--space-sm) 0 0;
+  font-size: var(--font-meta);
+  color: var(--feedback-error-text);
+}
+
+.drawerMeta {
+  display: block;
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.drawerLoading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.drawerBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.blockTitle {
+  margin: 0;
+  font-size: var(--font-body);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.blockText {
+  margin: 0;
+  font-size: var(--font-body);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+}
+
+.phases {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.phase {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: baseline;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--surface-sunken);
+  border-radius: var(--card-radius);
+}
+
+.phaseWeek {
+  flex: none;
+  font-size: var(--font-meta);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.phaseGoal {
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--card-radius);
+}
+
+.taskHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.taskTitle {
+  font-size: var(--font-body);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.taskMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  font-size: var(--font-meta);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
+.taskActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-2xs);
+}
+
+.assessRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex: 1;
+  min-width: 0;
+}
+
+.taskHint {
+  font-size: var(--font-meta);
+  color: var(--text-tertiary);
+}
+
+.track {
+  display: block;
+  width: 100%;
+  height: var(--space-2xs);
+  background: var(--surface-sunken);
+  border-radius: var(--badge-radius);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--action-primary);
+}
+
+@media (max-width: 760px) {
+  .formGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

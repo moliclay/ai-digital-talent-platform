@@ -1,0 +1,7 @@
+姓 名：高翔
+最高学历：硕士
+所学专业：统计学
+工作经验：4 年
+电 话：137-1706-2902
+Email: user17@example.com
+专业技能：TensorFlow、PyTorch、机器学习、深度学习、SQL、Kubernetes

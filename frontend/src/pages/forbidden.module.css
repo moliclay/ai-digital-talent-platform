@@ -1,0 +1,32 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-section-gap);
+}
+
+.pageHead {
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-width-hairline) solid var(--glass-layer-2-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-2-bg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+}
+
+.pageHead h1 {
+  font-size: var(--font-read);
+  line-height: var(--leading-section);
+  letter-spacing: var(--tracking-normal);
+  color: var(--glass-ink);
+}
+
+.panel {
+  padding: var(--space-lg);
+  border: var(--border-width-hairline) solid var(--glass-layer-1-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-1-bg);
+  -webkit-backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 空态 */
+  backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 空态 */
+  box-shadow: var(--glass-shadow-1); /* taste-skill-ignore: Glass 设计规范要求 L1 空态 */
+}

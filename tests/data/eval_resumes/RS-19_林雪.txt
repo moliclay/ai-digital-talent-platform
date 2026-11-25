@@ -1,0 +1,7 @@
+姓 名：林雪
+最高学历：硕士
+所学专业：网络工程
+工作经验：5 年
+电 话：138-1806-6602
+Email: user18@test.cn
+专业技能：大模型、TensorFlow、Kubernetes、Redis、产品设计、JavaScript

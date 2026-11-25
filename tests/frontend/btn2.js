@@ -1,0 +1,1 @@
+(() => [...document.querySelectorAll('button')].filter(b => (b.innerText||'').includes('上传简历')).map(b=>{const s=getComputedStyle(b); return {text:b.innerText, bg:s.backgroundColor, color:s.color, border:s.borderTopColor};}))()

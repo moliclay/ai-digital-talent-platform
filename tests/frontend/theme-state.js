@@ -1,0 +1,1 @@
+(() => JSON.stringify({ theme: document.documentElement.dataset.theme, label: document.querySelector('button[aria-label^="切换到"]')?.getAttribute('aria-label'), stored: localStorage.getItem('tl.theme'), bg: getComputedStyle(document.body).backgroundColor }))()

@@ -1,0 +1,38 @@
+.group {
+  display: inline-flex;
+  gap: var(--space-hair);
+  padding: var(--space-hair);
+  background: var(--surface-sunken);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--layout-control-height);
+  padding: 0 var(--space-sm);
+  border: var(--border-width-hairline) solid transparent;
+  border-radius: calc(var(--radius-control) - var(--space-hair));
+  color: var(--text-secondary);
+  font-size: var(--font-meta);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.option:hover {
+  color: var(--text-primary);
+}
+
+.option:focus-visible {
+  outline: var(--border-width-focus) solid var(--border-focus);
+  outline-offset: var(--space-hair);
+}
+
+.active {
+  background: var(--surface-card);
+  border-color: var(--border-default);
+  color: var(--text-primary);
+}

@@ -1,0 +1,125 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.empty {
+  padding: var(--space-2xl) 0;
+  text-align: center;
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-xs);
+}
+
+.stats dt {
+  font-size: var(--font-micro);
+  color: var(--text-secondary);
+}
+
+.stats dd {
+  margin: var(--space-2xs) 0 0;
+  font-size: var(--font-section);
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+
+.pass {
+  color: var(--data-positive);
+}
+
+.fail {
+  color: var(--data-negative);
+}
+
+.section {
+  padding-top: var(--space-md);
+  border-top: var(--border-width-hairline) solid var(--border-default);
+}
+
+.sectionTitle {
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-body);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.buckets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.bucket {
+  display: grid;
+  grid-template-columns: var(--space-4xl) minmax(0, 1fr) var(--space-3xl);
+  align-items: center;
+  gap: var(--space-sm);
+  height: var(--nav-row-height);
+}
+
+.bucketLabel {
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.track {
+  height: var(--space-2xs);
+  background: var(--surface-sunken);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--data-series-1);
+  border-radius: inherit;
+}
+
+.bucketCount {
+  font-size: var(--font-meta);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--text-primary);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto var(--space-3xl);
+  align-items: center;
+  gap: var(--space-xs);
+  height: var(--nav-row-height);
+}
+
+.topName {
+  overflow: hidden;
+  font-size: var(--font-body);
+  color: var(--text-primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.topScore {
+  font-size: var(--font-meta);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--text-secondary);
+}

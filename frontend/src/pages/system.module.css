@@ -1,0 +1,210 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.tabs {
+  display: flex;
+  gap: var(--space-xs);
+  border-bottom: var(--border-width-hairline) solid var(--border-default);
+}
+
+.tab {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: var(--border-width-focus) solid transparent;
+  margin-bottom: calc(var(--border-width-hairline) * -1);
+  font-size: var(--font-body);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+  background: var(--interactive-hover-overlay);
+}
+
+.tabActive,
+.tabActive:hover {
+  color: var(--text-primary);
+  font-weight: var(--weight-medium);
+  border-bottom-color: var(--action-primary);
+}
+
+.strong {
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.muted {
+  color: var(--text-secondary);
+}
+
+.ellipsis {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.code {
+  display: inline-block;
+  padding: 0 var(--space-xs);
+  background: var(--surface-sunken);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--badge-radius);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-meta);
+  color: var(--text-primary);
+}
+
+.stateWrap {
+  padding: var(--space-lg);
+}
+
+.emptyWrap {
+  padding: var(--space-lg);
+}
+
+.note {
+  margin: 0;
+  padding: 0 var(--space-lg) var(--space-sm);
+  font-size: var(--font-meta);
+  color: var(--text-tertiary);
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 var(--space-lg) var(--space-lg);
+}
+
+@media (max-width: 760px) {
+  .tab {
+    padding: var(--space-sm) var(--space-xs);
+  }
+}
+
+/* Glass system scope: mounted only when AppShell adds .glass-app / glass-route. */
+.page {
+  gap: var(--space-lg);
+}
+
+.pageHead {
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-width-hairline) solid var(--glass-layer-2-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-2-bg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  animation: systemRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-tag) backwards;
+}
+
+.pageHead h1 {
+  font-size: var(--font-read);
+  line-height: var(--leading-section);
+  letter-spacing: var(--tracking-normal);
+  color: var(--glass-ink);
+}
+
+.pageHead p {
+  max-width: 72ch;
+  margin-top: var(--space-2xs);
+  font-size: var(--font-meta);
+  line-height: var(--leading-meta);
+  color: var(--glass-ink-2);
+}
+
+.tabs {
+  width: fit-content;
+  max-width: 100%;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs);
+  border: var(--border-width-hairline) solid var(--glass-layer-1-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-1-bg);
+  -webkit-backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 标签条 */
+  backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 标签条 */
+  box-shadow: var(--glass-shadow-1); /* taste-skill-ignore: Glass 设计规范要求 L1 标签条 */
+  animation: systemRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-panel) backwards;
+}
+
+.tab {
+  margin-bottom: 0;
+  padding: var(--space-xs) var(--space-md);
+  border: 0;
+  border-radius: var(--glass-radius-sm);
+  color: var(--glass-ink-2);
+}
+
+.tab:hover {
+  color: var(--glass-ink);
+  background: var(--glass-row-hover);
+}
+
+.tabActive,
+.tabActive:hover {
+  color: var(--glass-accent);
+  background: var(--glass-accent-soft);
+  border-bottom-color: transparent;
+}
+
+.glassTable {
+  min-width: 0;
+  animation: systemRise var(--motion-reveal) var(--ease-expo) calc(var(--motion-delay-panel) + var(--motion-stagger-line)) backwards;
+}
+
+.strong {
+  color: var(--glass-ink);
+}
+
+.muted,
+.note,
+.stateWrap,
+.emptyWrap,
+.pagination {
+  color: var(--glass-ink-2);
+}
+
+.code {
+  background: var(--glass-field-bg);
+  border-color: var(--glass-field-border);
+  color: var(--glass-ink);
+}
+
+@keyframes systemRise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--motion-rise), 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .pageHead {
+    padding: var(--space-md);
+  }
+
+  .pageHead h1 {
+    font-size: var(--font-section);
+  }
+
+  .tab {
+    padding: var(--space-xs);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageHead,
+  .tabs,
+  .glassTable {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

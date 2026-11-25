@@ -1,0 +1,1 @@
+(() => { const a=document.querySelector('.glass-nav a[aria-current="page"]'); const s=getComputedStyle(a); return JSON.stringify({bg:s.backgroundColor,bgi:s.backgroundImage,border:s.borderTopColor,color:s.color,shadow:s.boxShadow,before:getComputedStyle(a,'::before').content,after:getComputedStyle(a,'::after').content}); })()

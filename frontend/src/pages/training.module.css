@@ -1,0 +1,383 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.tabs {
+  display: flex;
+  gap: var(--space-xs);
+  border-bottom: var(--border-width-hairline) solid var(--border-default);
+}
+
+.tab {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: var(--border-width-focus) solid transparent;
+  margin-bottom: calc(var(--border-width-hairline) * -1);
+  font-size: var(--font-body);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+  background: var(--interactive-hover-overlay);
+}
+
+.tabActive,
+.tabActive:hover {
+  color: var(--text-primary);
+  font-weight: var(--weight-medium);
+  border-bottom-color: var(--action-primary);
+}
+
+.searchBar,
+.diagnoseBar {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-bottom: var(--border-width-hairline) solid var(--border-default);
+  flex-wrap: wrap;
+}
+
+.grow {
+  flex: 1;
+  min-width: calc(var(--space-5xl) * 3);
+}
+
+.selectField {
+  width: calc(var(--space-5xl) * 4);
+}
+
+.diagnoseBar .selectField {
+  flex: none;
+}
+
+.stateWrap,
+.emptyWrap,
+.initialWrap {
+  padding: var(--space-lg);
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 var(--space-lg) var(--space-lg);
+}
+
+.note {
+  margin: 0;
+  padding: var(--space-sm) var(--space-lg) var(--space-lg);
+  font-size: var(--font-meta);
+  color: var(--text-tertiary);
+}
+
+.strong {
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.muted {
+  color: var(--text-secondary);
+}
+
+.rowActions {
+  display: flex;
+  gap: var(--space-2xs);
+}
+
+.linkButton {
+  display: block;
+  min-height: var(--layout-control-height);
+  padding: 0;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: var(--leading-snug);
+  color: var(--text-link);
+  cursor: pointer;
+}
+
+.linkButton:hover {
+  color: var(--text-link-hover);
+  text-decoration: underline;
+  text-underline-offset: var(--space-hair);
+}
+
+.gap {
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--weight-medium);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--space-xs);
+  background: var(--surface-sunken);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--badge-radius);
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.progressCell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.progressText {
+  font-size: var(--font-meta);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
+.track {
+  display: block;
+  width: 100%;
+  height: var(--space-2xs);
+  background: var(--surface-sunken);
+  border-radius: var(--badge-radius);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--action-primary);
+}
+
+.change {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.formStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.formError {
+  margin: 0;
+  font-size: var(--font-meta);
+  color: var(--feedback-error-text);
+}
+
+@media (max-width: 900px) {
+  .selectField {
+    width: 100%;
+  }
+
+  .diagnoseBar .selectField {
+    width: 100%;
+    flex: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .tab {
+    padding: var(--space-sm) var(--space-xs);
+  }
+}
+
+/* Glass training scope: mounted only while /training is in glassMode. */
+.page {
+  gap: var(--space-lg);
+}
+
+.pageHead {
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-width-hairline) solid var(--glass-layer-2-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-2-bg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  animation: trainingRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-tag) backwards;
+}
+
+.pageHead h1 {
+  font-size: var(--font-read);
+  line-height: var(--leading-section);
+  letter-spacing: var(--tracking-normal);
+  color: var(--glass-ink);
+}
+
+.pageHead p {
+  max-width: 72ch;
+  margin-top: var(--space-2xs);
+  font-size: var(--font-meta);
+  line-height: var(--leading-meta);
+  color: var(--glass-ink-2);
+}
+
+.tabs {
+  width: fit-content;
+  max-width: 100%;
+  gap: var(--space-2xs);
+  padding: var(--space-2xs);
+  border: var(--border-width-hairline) solid var(--glass-layer-1-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-1-bg);
+  -webkit-backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 标签条 */
+  backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 标签条 */
+  box-shadow: var(--glass-shadow-1); /* taste-skill-ignore: Glass 设计规范要求 L1 标签条 */
+  animation: trainingRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-panel) backwards;
+}
+
+.tab {
+  margin-bottom: 0;
+  padding: var(--space-xs) var(--space-md);
+  border-bottom: 0;
+  border-radius: var(--glass-radius-sm);
+  color: var(--glass-ink-2);
+}
+
+.tab:hover {
+  background: var(--glass-control-hover);
+  color: var(--glass-ink);
+}
+
+.tabActive,
+.tabActive:hover {
+  background: var(--glass-accent-soft);
+  color: var(--glass-accent);
+}
+
+.glassTable {
+  min-width: 0;
+  animation: trainingRise var(--motion-reveal) var(--ease-expo) calc(var(--motion-delay-panel) + var(--motion-stagger-line)) backwards;
+}
+
+.searchBar,
+.diagnoseBar {
+  border-bottom-color: var(--glass-line-soft);
+}
+
+.note {
+  color: var(--glass-ink-2);
+}
+
+.strong {
+  color: var(--glass-ink);
+}
+
+.muted,
+.progressText {
+  color: var(--glass-ink-2);
+}
+
+.linkButton {
+  color: var(--glass-accent);
+}
+
+.linkButton:hover {
+  color: var(--glass-accent-strong);
+}
+
+.gap {
+  color: var(--glass-ink);
+}
+
+.chip {
+  background: var(--glass-field-bg);
+  border-color: var(--glass-field-border);
+  color: var(--glass-ink-2);
+}
+
+.track {
+  height: var(--space-2xs);
+  background: var(--glass-field-bg);
+  border-radius: var(--glass-radius-sm);
+}
+
+.fill {
+  background: var(--glass-accent);
+}
+
+@media (max-width: 760px) {
+  .pageHead {
+    padding: var(--space-md);
+  }
+
+  .pageHead h1 {
+    font-size: var(--font-section);
+  }
+
+  .tabs {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    flex: none;
+    padding: var(--space-xs) var(--space-sm);
+  }
+
+  .glassTable table {
+    min-width: calc(var(--space-5xl) * 11);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageHead,
+  .tabs,
+  .glassTable {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes trainingRise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--motion-rise), 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Readability on large glass surfaces: table heads and panel meta use ink-2. */
+.glassTable th {
+  color: var(--glass-ink-2);
+}
+
+.glassTable h2 {
+  color: var(--glass-ink);
+}
+
+.glassTable > header p {
+  color: var(--glass-ink-2);
+}
+
+.tabActive,
+.tabActive:hover {
+  box-shadow: inset 0 0 0 var(--border-width-hairline) var(--glass-accent-line); /* taste-skill-ignore: 选中标签的 1px 内描边，属于玻璃高光而非浮层阴影 */
+}
+
+
+/* Long mentor strings can arrive from generated plans; wrap inside the fixed table. */
+.mentorCell {
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: var(--leading-snug);
+}

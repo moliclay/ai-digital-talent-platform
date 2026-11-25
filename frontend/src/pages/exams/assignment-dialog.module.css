@@ -1,0 +1,160 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.examHint {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-meta);
+}
+
+.dateRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.candidates {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.candidateHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.candidateHead legend {
+  padding: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-meta);
+}
+
+.selectedCount {
+  color: var(--text-secondary);
+  font-size: var(--font-meta);
+}
+
+.candidateTools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.candidateTools > :first-child {
+  flex: 1;
+}
+
+.candidateList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  max-height: calc(var(--space-5xl) * 6);
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.candidate,
+.candidateOn {
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.candidateOn {
+  background: var(--interactive-selected-bg);
+  border-color: var(--interactive-selected-border);
+}
+
+.candidateLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: calc(var(--space-3xl) * 1.35);
+  padding: var(--space-xs) var(--space-sm);
+  cursor: pointer;
+}
+
+.checkbox {
+  width: var(--space-md);
+  height: var(--space-md);
+  margin: 0;
+  accent-color: var(--action-primary);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: var(--space-2xl);
+  height: var(--space-2xl);
+  border-radius: var(--radius-pill);
+  background: var(--interactive-selected-bg);
+  color: var(--action-primary);
+  font-size: var(--font-meta);
+  font-weight: var(--font-weight-semibold);
+}
+
+.candidateText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.candidateName {
+  color: var(--text-primary);
+  font-size: var(--font-body);
+}
+
+.candidateMeta {
+  overflow: hidden;
+  color: var(--text-secondary);
+  font-size: var(--font-meta);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.listState {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.warn {
+  margin: 0;
+  padding: var(--space-sm);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--radius-control);
+  background: var(--surface-sunken);
+  color: var(--text-secondary);
+  font-size: var(--font-meta);
+}
+
+.error {
+  margin: 0;
+  color: var(--feedback-error-text);
+  font-size: var(--font-meta);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: var(--border-width-hairline) solid var(--border-default);
+}
+
+@media (max-width: 700px) {
+  .dateRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

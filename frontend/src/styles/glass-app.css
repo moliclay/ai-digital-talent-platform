@@ -1,0 +1,583 @@
+/* 仅工作台/壳层使用的玻璃主题作用域；其他页面不挂 .glass-app。 */
+.glass-app,
+body.glass-route {
+  --surface-page: transparent;
+  --surface-card: transparent;
+  --surface-raised: var(--glass-layer-3-bg);
+  --surface-sunken: var(--glass-field-bg);
+  --surface-disabled: var(--glass-field-bg);
+  --surface-overlay: var(--glass-overlay);
+  --text-primary: var(--glass-ink);
+  --text-secondary: var(--glass-ink-2);
+  --text-tertiary: var(--glass-ink-3);
+  --text-disabled: var(--glass-ink-3);
+  --text-on-action: var(--glass-accent-ink);
+  --text-link: var(--glass-accent-text);
+  --text-link-hover: var(--glass-accent-strong);
+  --border-default: var(--glass-line-soft);
+  --border-strong: var(--glass-layer-2-border);
+  --border-control: var(--glass-field-border);
+  --border-focus: var(--glass-accent);
+  --border-error: var(--glass-danger);
+  --border-disabled: var(--glass-field-border);
+  --action-primary: var(--glass-accent);
+  --action-primary-hover: var(--glass-accent-strong);
+  --action-primary-active: var(--glass-accent-strong);
+  --action-secondary: var(--glass-field-bg);
+  --action-secondary-hover: var(--glass-neutral-soft);
+  --feedback-success-bg: var(--glass-accent-soft);
+  --feedback-success-text: var(--glass-accent-text);
+  --feedback-success-border: var(--glass-accent-line);
+  --feedback-success-icon: var(--glass-accent);
+  --feedback-warning-bg: var(--glass-warn-soft);
+  --feedback-warning-text: var(--glass-warn);
+  --feedback-warning-border: var(--glass-warn-soft);
+  --feedback-warning-icon: var(--glass-warn);
+  --feedback-error-bg: var(--glass-danger-bg);
+  --feedback-error-text: var(--glass-danger);
+  --feedback-error-border: var(--glass-danger-bg);
+  --feedback-error-icon: var(--glass-danger);
+  --feedback-info-bg: var(--glass-accent-soft);
+  --feedback-info-text: var(--glass-accent-text);
+  --feedback-info-border: var(--glass-accent-line);
+  --feedback-info-icon: var(--glass-accent);
+  --interactive-hover-overlay: var(--glass-row-hover);
+  --interactive-active-overlay: var(--glass-neutral-soft);
+  --interactive-selected-bg: var(--glass-neutral-soft);
+  --interactive-selected-border: var(--glass-accent-line);
+  --interactive-selected-text: var(--glass-ink);
+  --data-series-1: var(--glass-accent);
+  --data-series-2: var(--glass-accent);
+  --data-positive: var(--glass-accent);
+  --data-negative: var(--glass-danger);
+  --data-neutral: var(--glass-ink-3);
+  --score-bar-height: var(--space-2xs);
+  --score-track: var(--glass-field-bg);
+  --score-fill: var(--glass-accent);
+  --score-threshold: var(--glass-ink);
+  --score-pass-text: var(--glass-accent-text);
+  --score-fail-text: var(--glass-danger);
+  --kpi-label: var(--glass-ink-2);
+  --kpi-value: var(--glass-ink);
+  --kpi-divider: var(--glass-line-soft);
+  --table-header-height: var(--space-4xl);
+  --table-row-height: var(--space-5xl);
+  --table-header-text: var(--glass-ink-2);
+  --table-cell-text: var(--glass-ink-2);
+  --table-cell-secondary: var(--glass-ink-2);
+  --table-header-rule: var(--glass-line-soft);
+  --table-rule: var(--glass-line-soft);
+  --table-row-hover: var(--glass-row-hover);
+  --table-row-selected: var(--glass-neutral-soft);
+  --nav-item-text: var(--glass-ink-2);
+  --nav-item-text-active: var(--glass-ink);
+  --nav-item-bg-active: transparent;
+  --nav-item-indicator: var(--glass-accent);
+  --nav-item-icon: var(--glass-ink-2);
+  --avatar-bg: var(--glass-neutral-soft);
+  --avatar-text: var(--glass-ink);
+  --skeleton-bg: var(--glass-field-bg);
+  --badge-neutral-bg: var(--glass-neutral-soft);
+  --badge-neutral-text: var(--glass-ink-2);
+  --badge-success-bg: var(--glass-accent-soft);
+  --badge-success-text: var(--glass-accent-text);
+  --badge-warning-bg: var(--glass-warn-soft);
+  --badge-warning-text: var(--glass-warn);
+  --badge-error-bg: var(--glass-danger-bg);
+  --badge-error-text: var(--glass-danger);
+  --badge-info-bg: var(--glass-accent-soft);
+  --badge-info-text: var(--glass-accent-text);
+  --button-secondary-bg: var(--glass-control-bg);
+  --button-secondary-bg-hover: var(--glass-control-hover);
+  --button-secondary-border: var(--glass-field-border);
+  --button-secondary-text: var(--glass-ink);
+  --button-ghost-text: var(--glass-ink-2);
+  --button-ghost-bg-hover: var(--glass-row-hover);
+  --button-primary-bg: var(--glass-accent);
+  --button-primary-bg-hover: var(--glass-accent-strong);
+  --button-primary-bg-active: var(--glass-accent-strong);
+  --button-primary-text: var(--glass-accent-ink);
+  --button-disabled-bg: var(--glass-field-bg);
+  --button-disabled-text: var(--glass-ink-3);
+  --button-disabled-border: var(--glass-field-border);
+  --input-height: var(--layout-form-height);
+  --input-padding-x: var(--space-sm);
+  --input-radius: var(--glass-radius-sm);
+  --input-bg: var(--glass-field-bg);
+  --input-bg-disabled: var(--glass-field-bg);
+  --input-border: var(--glass-field-border);
+  --input-border-hover: var(--glass-layer-2-border);
+  --input-border-focus: var(--glass-accent);
+  --input-border-error: var(--glass-danger);
+  --input-text: var(--glass-ink);
+  --input-placeholder: var(--glass-ink-3);
+  --switch-width: 32px;
+  --switch-height: 20px;
+  --switch-thumb: 16px;
+  --switch-track-off: var(--glass-field-bg);
+  --switch-track-on: var(--glass-accent);
+  --switch-thumb-color: var(--glass-ink);
+  --dropzone-bg: var(--glass-field-bg);
+  --dropzone-border: var(--glass-field-border);
+  --dropzone-active-border: var(--glass-accent);
+  --dropzone-radius: var(--glass-radius-sm);
+  --shadow-menu: var(--glass-shadow-2);
+  --dialog-bg: var(--glass-layer-3-bg);
+  --dialog-border: var(--glass-layer-3-border);
+  --dialog-shadow: var(--glass-shadow-2);
+  --dialog-radius: var(--glass-radius-lg);
+  --pagination-text: var(--glass-ink-2);
+  --pagination-text-strong: var(--glass-ink);
+  --glass-blob-opacity: 0.4;
+  color: var(--glass-ink);
+  background: var(--glass-page-bg);
+}
+
+.glass-app-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--glass-page-bg);
+}
+
+.glass-app-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/glass-noise.svg");
+  background-size: var(--glass-noise-size);
+  opacity: var(--glass-noise-opacity);
+  mix-blend-mode: overlay;
+}
+
+.glass-app-blob {
+  position: absolute;
+  width: 46vw;
+  height: 46vw;
+  border-radius: 50%;
+  filter: var(--glass-blob-blur);
+  opacity: var(--glass-blob-opacity);
+  animation: glassDrift var(--glass-drift-a) var(--ease-soft) infinite;
+}
+
+.glass-app-blob-a {
+  top: -14vw;
+  left: -8vw;
+  background: var(--glass-blob-a);
+}
+
+.glass-app-blob-b {
+  top: 18vh;
+  right: -10vw;
+  width: 38vw;
+  height: 38vw;
+  background: var(--glass-blob-b);
+  animation-duration: var(--glass-drift-b);
+  animation-direction: reverse;
+}
+
+.glass-app-blob-c {
+  bottom: -22vw;
+  left: 30vw;
+  width: 42vw;
+  height: 42vw;
+  background: var(--glass-blob-c);
+  opacity: calc(var(--glass-blob-opacity) * 0.8);
+  animation-duration: var(--glass-drift-c);
+}
+
+@keyframes glassDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(4vw, 3vh, 0) scale(1.08);
+  }
+}
+
+.glass-app > .glass-side,
+.glass-app > .glass-main {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-app {
+  grid-template-columns: minmax(0, calc(var(--layout-sidebar) + var(--space-md))) minmax(0, 1fr);
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  min-height: 100dvh;
+}
+
+.glass-side {
+  top: var(--space-xl);
+  align-self: start;
+  height: calc(100dvh - var(--space-4xl));
+  padding: var(--space-lg) var(--space-md) var(--space-md);
+  gap: var(--space-lg);
+  border: var(--border-width-hairline) solid var(--glass-layer-1-border);
+  border-radius: var(--glass-radius-lg);
+  background: var(--glass-layer-1-bg);
+  -webkit-backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 侧栏 */
+  backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 侧栏 */
+  box-shadow: var(--glass-shadow-1); /* taste-skill-ignore: Glass 设计规范要求 L1 阴影 */
+}
+
+.glass-side .brand {
+  padding: 0 var(--space-xs) var(--space-md);
+  border-bottom: var(--border-width-hairline) solid var(--glass-line-soft);
+}
+
+.glass-side .brandText {
+  min-width: 0;
+}
+
+.glass-side .wordmark {
+  font-size: var(--font-body);
+  color: var(--glass-ink);
+}
+
+.glass-side .dept {
+  color: var(--glass-ink-3);
+}
+
+.glass-nav {
+  gap: var(--space-lg);
+}
+
+.glass-nav .group {
+  gap: var(--space-2xs);
+}
+
+.glass-nav .groupLabel {
+  padding: 0 var(--space-xs);
+  color: var(--glass-ink-3);
+  font-size: var(--font-micro);
+  letter-spacing: var(--tracking-normal);
+}
+
+.glass-nav-link {
+  min-height: var(--space-2xl);
+  height: auto;
+  padding: var(--space-xs) var(--space-sm);
+  gap: var(--space-sm);
+  border-radius: var(--glass-radius-sm);
+  color: var(--glass-ink-2);
+  font-size: var(--font-body);
+  transition:
+    background-color var(--motion-hover) var(--ease-out),
+    color var(--motion-hover) var(--ease-out),
+    transform var(--motion-press) var(--ease-out);
+}
+
+.glass-nav-link:hover {
+  background: var(--glass-neutral-soft);
+  color: var(--glass-ink);
+}
+
+.glass-nav-link:active {
+  transform: scale(0.985);
+}
+
+.glass-nav-link[aria-current="page"] {
+  color: var(--glass-ink);
+  background: var(--glass-neutral-soft);
+  box-shadow: inset 0 1px 0 var(--glass-layer-2-border); /* taste-skill-ignore: Glass 设计规范要求选中项顶边高光 */
+  font-weight: var(--weight-medium);
+}
+
+.glass-nav-link[aria-current="page"]::before {
+  content: none;
+  display: none;
+}
+
+.glass-nav-link[aria-current="page"]::after {
+  content: "";
+  width: var(--space-2xs);
+  height: var(--space-2xs);
+  margin-left: auto;
+  border-radius: 50%;
+  background: var(--glass-accent);
+  box-shadow: 0 0 var(--glass-glow) var(--glass-accent); /* taste-skill-ignore: Glass 设计规范要求当前项 accent 微光 */
+}
+
+.glass-nav-link .linkIcon {
+  color: var(--glass-ink-2);
+}
+
+.glass-nav-link[aria-current="page"] .linkIcon {
+  color: var(--glass-accent);
+}
+
+.glass-side .footer {
+  border-top: var(--border-width-hairline) solid var(--glass-line-soft);
+}
+
+.glass-side .account {
+  min-height: var(--space-2xl);
+}
+
+.glass-side .avatar {
+  background: var(--glass-neutral-soft);
+  color: var(--glass-ink);
+}
+
+.glass-side .accountName {
+  color: var(--glass-ink);
+}
+
+.glass-side .accountRole {
+  color: var(--glass-ink-3);
+}
+
+.glass-main {
+  min-width: 0;
+  padding: var(--space-xs) 0 var(--space-2xl);
+}
+
+.glass-content {
+  max-width: var(--layout-wide);
+  margin-inline: auto;
+}
+
+.glass-app [class*="panel"] {
+  background: var(--glass-layer-2-bg);
+  border: var(--border-width-hairline) solid var(--glass-layer-2-border);
+  border-radius: var(--glass-radius-lg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 面板 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 面板 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 阴影 */
+}
+
+.glass-app [class*="panel"] [class*="head"] {
+  padding: var(--space-md) var(--space-lg) var(--space-xs);
+}
+
+.glass-app [class*="panel"] [class*="title"] {
+  color: var(--glass-ink);
+}
+
+.glass-app [class*="panel"] [class*="meta"] {
+  color: var(--glass-ink-3);
+}
+
+.glass-app [class*="panel"] [class*="body"] {
+  padding: 0 var(--space-lg) var(--space-lg);
+}
+
+@media (max-width: 900px) {
+  .glass-app {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-md);
+    padding: var(--space-md);
+  }
+
+  .glass-side {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-nav);
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--glass-radius-md);
+  }
+
+  .glass-nav {
+    flex-direction: row;
+    gap: var(--space-2xs);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+
+  .glass-nav .group {
+    flex: none;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .glass-nav .groupLabel {
+    display: none;
+  }
+
+  .glass-nav-link {
+    flex: none;
+    min-height: var(--space-2xl);
+    white-space: nowrap;
+  }
+
+  .glass-nav-link[aria-current="page"]::after {
+    display: none;
+  }
+
+  .glass-main {
+    padding: 0 0 var(--space-xl);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-app-blob {
+    animation: none;
+  }
+}
+
+/* 壳层进场：侧栏先站住，工作台内容再按层级跟上。 */
+@keyframes glassSideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--motion-rise), 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.glass-side {
+  animation: glassSideIn var(--motion-reveal) var(--ease-expo) backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass-side {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 表格容器在玻璃页属于 L1 结构层，比 L2 内容卡更克制。 */
+.glass-app [class*="panel"][class*="glassTable"] {
+  background: var(--glass-layer-1-bg);
+  border-color: var(--glass-layer-1-border);
+  -webkit-backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 表格容器 */
+  backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 表格容器 */
+  box-shadow: var(--glass-shadow-1); /* taste-skill-ignore: Glass 设计规范要求 L1 表格容器 */
+}
+
+@media (max-width: 900px) {
+  .glass-app [class*="panel"][class*="glassTable"] {
+    -webkit-backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求移动端降为两层 */
+    backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求移动端降为两层 */
+  }
+}
+
+/* Modal / Drawer / ConfirmDialog 通过 portal 挂在 body 下；glass-route 负责 L3 玻璃。 */
+body.glass-route [role="dialog"],
+body.glass-route [role="alertdialog"] {
+  background: var(--glass-layer-3-bg);
+  border: var(--border-width-hairline) solid var(--glass-layer-3-border);
+  -webkit-backdrop-filter: var(--glass-layer-3-blur); /* taste-skill-ignore: Glass 设计规范要求 L3 弹层 */
+  backdrop-filter: var(--glass-layer-3-blur); /* taste-skill-ignore: Glass 设计规范要求 L3 弹层 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L3 弹层 */
+}
+
+body.glass-route .glass-dialog {
+  position: relative;
+  border-radius: var(--glass-radius-lg);
+}
+
+body.glass-route .glass-drawer {
+  border-right: 0;
+  border-radius: var(--glass-radius-lg) 0 0 var(--glass-radius-lg);
+}
+
+body.glass-route [role="dialog"]::before,
+body.glass-route [role="alertdialog"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 12%;
+  left: 12%;
+  height: var(--border-width-hairline);
+  background: var(--glass-highlight);
+  border-radius: var(--radius-pill);
+  pointer-events: none;
+}
+
+body.glass-route [role="dialog"] > header,
+body.glass-route [role="alertdialog"] > header {
+  border-bottom: var(--border-width-hairline) solid var(--glass-line-soft);
+}
+
+body.glass-route [role="dialog"] > footer,
+body.glass-route [role="alertdialog"] > footer {
+  border-top-color: var(--glass-line-soft);
+}
+
+/* 画像页卡片面积大，降低光斑强度避免同排卡片出现绿/蓝色差。 */
+.glass-app.glass-talent {
+  --glass-blob-opacity: 0.26;
+}
+
+/* 匹配详情同屏面板多，降低光斑强度避免左右栏出现蓝/绿色差。 */
+.glass-app.glass-match-detail {
+  --glass-blob-opacity: 0.28;
+}
+
+/* 匹配详情面板多，统一叠一层深色 tint，避免左右栏折射出明显蓝/绿差。 */
+.glass-app.glass-match-detail [class*="panel"] {
+  background: var(--glass-layer-2-bg), var(--glass-card-tint);
+}
+
+.glass-app.glass-match-detail [class*="panel"][class*="glassTable"] {
+  background: var(--glass-layer-1-bg), var(--glass-card-tint);
+}
+
+/* 右栏正压在青色光斑上，单独压低该光斑，避免详情左右栏色相分裂。 */
+.glass-app.glass-match-detail .glass-app-blob-b {
+  opacity: calc(var(--glass-blob-opacity) * 0.45);
+}
+
+/* 受众切换：共享组件在玻璃页需要深色分段底与 accent 选中态。 */
+.glass-app .glass-segmented {
+  background: var(--glass-field-bg);
+  border-color: var(--glass-field-border);
+}
+
+.glass-app .glass-segmented-option {
+  color: var(--glass-ink-2);
+}
+
+.glass-app .glass-segmented-option:hover {
+  color: var(--glass-ink);
+}
+
+.glass-app .glass-segmented-active,
+.glass-app .glass-segmented-active:hover {
+  background: var(--glass-accent-soft);
+  border-color: var(--glass-accent-line);
+  color: var(--glass-accent);
+}
+
+/* 共享 KPI 条：作用域内直连玻璃层，避免旧浅色 surface/kpi token 残留。 */
+.glass-app .glass-kpi {
+  background: var(--glass-layer-2-bg);
+  border-color: var(--glass-layer-2-border);
+  border-radius: var(--glass-radius-lg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 KPI 条 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 KPI 条 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 KPI 条 */
+}
+
+
+/* Light theme: white glass needs a deeper action color and a lighter native scheme.
+   Text links use accent-text (#0f766e) so they stay ≥4.5:1 on white glass. */
+html[data-theme="light"] .glass-app,
+html[data-theme="light"] body.glass-route {
+  color-scheme: light;
+  --action-primary: var(--glass-accent);
+  --button-primary-bg: var(--glass-accent);
+  --button-primary-bg-hover: var(--glass-accent-strong);
+  --button-primary-bg-active: var(--glass-accent-strong);
+  --glass-blob-opacity: 0.42;
+}
+
+html[data-theme="light"] .glass-app.glass-talent,
+html[data-theme="light"] .glass-app.glass-match-detail {
+  --glass-blob-opacity: 0.3;
+}

@@ -1,0 +1,471 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.summaryCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  background: var(--surface-card);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--radius-card);
+}
+
+.summaryLabel {
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.summaryValue {
+  font-size: var(--font-display);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-page);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+}
+
+.progressBand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--surface-card);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--radius-card);
+}
+
+.progressLabel {
+  flex: none;
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.progressTrack {
+  display: block;
+  width: 100%;
+  height: var(--score-bar-height);
+  overflow: hidden;
+  background: var(--score-track);
+  border-radius: var(--radius-pill);
+}
+
+.progressFill {
+  display: block;
+  height: 100%;
+  background: var(--score-fill);
+  border-radius: var(--radius-pill);
+}
+
+.progressValue {
+  flex: none;
+  min-width: calc(var(--space-5xl) + var(--space-md));
+  font-size: var(--font-meta);
+  font-weight: var(--weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--surface-card);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--radius-card);
+}
+
+.blockHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.blockTitle {
+  margin: 0;
+  font-size: var(--font-card);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.blockMeta {
+  margin: var(--space-2xs) 0 0;
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.muted {
+  font-size: var(--font-meta);
+  color: var(--text-secondary-strong);
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--surface-sunken);
+  border: var(--border-width-hairline) solid var(--border-default);
+  border-radius: var(--radius-control);
+}
+
+.planHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.planTitleWrap {
+  min-width: 0;
+}
+
+.planTitle {
+  margin: 0;
+  font-size: var(--font-body);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.planMeta {
+  margin: var(--space-2xs) 0 0;
+  font-size: var(--font-meta);
+  color: var(--text-secondary);
+}
+
+.planProgress {
+  display: block;
+}
+
+.goal {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-sm);
+  align-items: baseline;
+  padding-top: var(--space-xs);
+  border-top: var(--border-width-hairline) solid var(--border-default);
+}
+
+.goalLabel {
+  font-size: var(--font-meta);
+  font-weight: var(--weight-medium);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.goalText {
+  margin: 0;
+  font-size: var(--font-meta);
+  line-height: var(--leading-relaxed);
+  color: var(--text-primary);
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: var(--border-width-hairline) solid var(--border-default);
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm) 0;
+  border-bottom: var(--border-width-hairline) solid var(--border-default);
+}
+
+.task:last-child {
+  border-bottom: 0;
+}
+
+.taskHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.taskTitle {
+  font-size: var(--font-meta);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.taskMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-sm);
+  font-size: var(--font-micro);
+  color: var(--text-secondary);
+}
+
+.examHint {
+  color: var(--text-secondary-strong);
+}
+
+.taskProgress {
+  display: block;
+}
+
+.taskActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.error {
+  margin: 0;
+  font-size: var(--font-meta);
+  color: var(--feedback-error-text);
+}
+
+.emptyWrap {
+  padding: var(--space-lg) 0;
+}
+
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.planSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.change {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.strong {
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+@media (max-width: 900px) {
+  .summaryGrid,
+  .skeletonGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .summaryGrid,
+  .skeletonGrid,
+  .form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .blockHead {
+    flex-direction: column;
+  }
+}
+
+/* Glass employee training scope. Summary cards stay tactile fields; only page head and the two blocks blur. */
+.page {
+  gap: var(--space-lg);
+}
+
+.pageHead {
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--border-width-hairline) solid var(--glass-layer-2-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-2-bg);
+  -webkit-backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  backdrop-filter: var(--glass-layer-2-blur); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  box-shadow: var(--glass-shadow-2); /* taste-skill-ignore: Glass 设计规范要求 L2 页头 */
+  animation: myRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-tag) backwards;
+}
+
+.pageHead h1 {
+  font-size: var(--font-read);
+  line-height: var(--leading-section);
+  letter-spacing: var(--tracking-normal);
+  color: var(--glass-ink);
+}
+
+.pageHead p {
+  max-width: 72ch;
+  margin-top: var(--space-2xs);
+  font-size: var(--font-meta);
+  line-height: var(--leading-meta);
+  color: var(--glass-ink-2);
+}
+
+.summaryCard {
+  min-width: 0;
+  background: var(--glass-field-bg);
+  border-color: var(--glass-field-border);
+  border-radius: var(--glass-radius-md);
+}
+
+.summaryLabel {
+  color: var(--glass-ink-2);
+}
+
+.summaryValue {
+  font-size: var(--font-display);
+  color: var(--glass-ink);
+}
+
+.progressBand {
+  background: var(--glass-field-bg);
+  border-color: var(--glass-field-border);
+  border-radius: var(--glass-radius-md);
+}
+
+.progressLabel {
+  color: var(--glass-ink-2);
+}
+
+.progressTrack {
+  background: var(--glass-field-bg);
+}
+
+.progressFill {
+  background: var(--glass-accent);
+}
+
+.progressValue {
+  color: var(--glass-ink);
+}
+
+.block {
+  min-width: 0;
+  border: var(--border-width-hairline) solid var(--glass-layer-1-border);
+  border-radius: var(--glass-radius-md);
+  background: var(--glass-layer-1-bg);
+  -webkit-backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 内容区 */
+  backdrop-filter: var(--glass-layer-1-blur); /* taste-skill-ignore: Glass 设计规范要求 L1 内容区 */
+  box-shadow: var(--glass-shadow-1); /* taste-skill-ignore: Glass 设计规范要求 L1 内容区 */
+  animation: myRise var(--motion-reveal) var(--ease-expo) var(--motion-delay-panel) backwards;
+}
+
+.blockTitle {
+  color: var(--glass-ink);
+}
+
+.blockMeta,
+.muted {
+  color: var(--glass-ink-2);
+}
+
+.plan {
+  background: var(--glass-field-bg);
+  border-color: var(--glass-field-border);
+  border-radius: var(--glass-radius-sm);
+}
+
+.planTitle,
+.taskTitle,
+.strong {
+  color: var(--glass-ink);
+}
+
+.planMeta {
+  color: var(--glass-ink-2);
+}
+
+.goal {
+  border-top-color: var(--glass-line-soft);
+}
+
+.goalLabel {
+  color: var(--glass-ink-2);
+}
+
+.goalText {
+  color: var(--glass-ink);
+}
+
+.tasks {
+  border-top-color: var(--glass-line-soft);
+}
+
+.task {
+  border-bottom-color: var(--glass-line-soft);
+}
+
+.taskMeta {
+  color: var(--glass-ink-2);
+}
+
+.examHint {
+  color: var(--glass-ink-2);
+}
+
+.error {
+  color: var(--glass-danger);
+}
+
+.change {
+  color: var(--glass-ink);
+}
+
+@media (max-width: 900px) {
+  .summaryGrid .summaryCard:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .pageHead {
+    padding: var(--space-md);
+  }
+
+  .pageHead h1 {
+    font-size: var(--font-section);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pageHead,
+  .block {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes myRise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, var(--motion-rise), 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

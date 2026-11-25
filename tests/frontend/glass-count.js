@@ -1,0 +1,1 @@
+(() => { const els=[...document.querySelectorAll('*')].filter(el=>getComputedStyle(el).backdropFilter && getComputedStyle(el).backdropFilter !== 'none'); return JSON.stringify({count:els.length, items:els.map(el=>({tag:el.tagName, cls:String(el.className).slice(0,42), filter:getComputedStyle(el).backdropFilter}))}); })()
