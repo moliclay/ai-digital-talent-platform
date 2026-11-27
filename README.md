@@ -82,6 +82,21 @@ backend/.venv/Scripts/python.exe backend/scripts/init_db.py
 
 `init_db.py --reset` 会删除并重建目标库，不属于例行启动。后端配置从 `backend/.env` 加载，默认上传目录为 `backend/storage/`。启动包装脚本会执行 ChatAI 幂等增量迁移，已有业务数据保持原状。Milvus 使用现有 Docker 容器，语义检索还依赖 Ollama 嵌入服务。
 
+## Docker 部署（拉取镜像运行）
+
+平台已发布到 GitHub Container Registry，机器上有 Docker 即可运行，不需要本地装 Python 和 Node：
+
+```bash
+docker pull ghcr.io/moliclay/ai-talent-api:latest
+docker pull ghcr.io/moliclay/ai-talent-web:latest
+
+docker compose up -d
+```
+
+打开 <http://localhost:8080>，演示账号 `admin` / `123456`（另有 `hr_zhao`、`pm_wang`、`emp_chen`，密码相同）。首次启动 api 容器会自动等待 MySQL、建库建表、灌入种子数据；`compose` 里已包含 MySQL 8.0 与 Redis 7。
+
+镜像只有 `linux/amd64`。环境变量、纯 `docker run` 方式、数据卷与已知限制见 [Docker 部署说明](docs/docker-deploy.md)。
+
 ## 验证与资料
 
 ```powershell

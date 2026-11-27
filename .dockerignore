@@ -1,0 +1,21 @@
+# 供 api 镜像构建（上下文=仓库根）使用
+.git
+.gitignore
+node_modules
+frontend
+docs/frontend/shots
+docs/images
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+**/.venv
+backend/storage
+backend/.env
+backups
+backup
+logs
+*.log
+*.tsbuildinfo
+dist
+.env
+.env.*

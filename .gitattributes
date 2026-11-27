@@ -1,0 +1,3 @@
+# 容器入口脚本必须保持 LF，否则 Linux 容器内 /bin/sh 会报 bad interpreter
+*.sh text eol=lf
+docker-entrypoint.sh text eol=lf
