@@ -9,7 +9,7 @@
 
 首次启动 api 容器会自动等待 MySQL、建库建表、灌入种子数据并创建演示账号（幂等，可用 `DB_AUTO_INIT=0` 关闭）。
 
-两个包已设为公开，正常情况直接 `docker pull` 即可。若报 `unauthorized` / `denied`，说明包被改回私有或未公开，先登录一次：
+GHCR 新建的容器包默认私有，拉取前先登录一次：
 
 ```bash
 echo "$GH_TOKEN" | docker login ghcr.io -u moliclay --password-stdin

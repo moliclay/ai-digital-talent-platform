@@ -93,7 +93,7 @@ docker pull ghcr.io/moliclay/ai-talent-web:latest
 docker compose up -d
 ```
 
-> 两个镜像包已设为公开。若拉取时提示 `denied` 或 `unauthorized`，说明包仍是私有，先登录一次：`echo $GH_TOKEN | docker login ghcr.io -u moliclay --password-stdin`（令牌需要 `read:packages` 权限）。
+> GHCR 新建的包默认私有：拉取前先登录一次 —— `echo $GH_TOKEN | docker login ghcr.io -u moliclay --password-stdin`（`GH_TOKEN` 为 GitHub 令牌，勾选 `read:packages`）。若已把两个包在 <https://github.com/users/moliclay/packages/container/ai-talent-api/settings> 与 <https://github.com/users/moliclay/packages/container/ai-talent-web/settings> 改成 Public，可跳过登录。
 
 打开 <http://localhost:8080>，演示账号 `admin` / `123456`（另有 `hr_zhao`、`pm_wang`、`emp_chen`，密码相同）。首次启动 api 容器会自动等待 MySQL、建库建表、灌入种子数据；`compose` 里已包含 MySQL 8.0 与 Redis 7。
 
